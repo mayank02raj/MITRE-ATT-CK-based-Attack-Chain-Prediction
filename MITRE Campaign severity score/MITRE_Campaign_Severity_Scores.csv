@@ -1,0 +1,51 @@
+Campaign_ID,Campaign_Name,Sector/Focus,NCISS_Score,Rationale
+C0028,2015 Ukraine Electric Power Attack,Electric grid outage (BlackEnergy/KillDisk),92,Proven OT disruption; national grid impact; critical infrastructure.
+C0025,2016 Ukraine Electric Power Attack,Electric grid (Industroyer),95,Purpose-built grid malware; safety-critical; national scope.
+C0034,2022 Ukraine Electric Power Attack,Electric utility (CaddyWiper),93,Destructive malware; OT commands; low recoverability.
+C0051,APT28 Nearest Neighbor,Gov/Ukraine,78,Advanced lateral movement; zero-day usage; espionage.
+C0040,APT41 DUST,Shipping/Logistics/Media,70,Persistent espionage; credential theft; regional spread.
+C0046,ArcaneDoor,Gov & critical infra,82,Network device backdoors; perimeter compromise; low detectability.
+C0010,UNC3890,Israeli sectors,72,Cross-sector espionage; moderate recoverability.
+C0011,Transparent Tribe,Academia,58,Targeted PII theft; low system criticality.
+C0015,Bazar/Conti Intrusions,Enterprise,85,Ransomware execution; major operational disruption.
+C0017,APT41 State Gov Compromise,State government,80,PII exfiltration; persistent compromise; high criticality.
+C0018,AvosLocker Deployments,Enterprise,78,Ransomware; confirmed availability impact.
+C0021,Nov 2018 Spearphishing,Public/NGO/Edu,55,Widespread phishing; moderate info impact.
+C0050,J-magic Campaign,Networking/Manufacturing,74,Juniper router backdoor; lateral propagation risk.
+C0035,KV Botnet (Volt Typhoon),Energy/Telecom/Guam,88,Pre-positioning in CI; cross-sector dependencies.
+C0049,Leviathan Australian Intrusions,Multi-sector,72,Credential theft; long-term espionage.
+C0020,Maroochy Water Breach,Water/Wastewater,90,ICS manipulation; physical safety impact.
+C0002,Night Dragon,Energy/SCADA,70,Industrial espionage; intellectual property theft.
+C0012,Operation CuckooBees,Tech/Manufacturing,73,R&D theft at scale; persistent APT.
+C0054,Operation Triangulation,Mobile/iOS,76,Zero-click chain; stealthy espionage; high sensitivity.
+C0014,Operation Wocao,MSPs/Various industries,82,MSP compromise; broad data exposure risk.
+C0030,Triton SIS Attack,Petrochemical ICS,97,Safety-system compromise; potential loss-of-life risk.
+C0031,Unitronics Defacement,Water/Energy/Healthcare,62,OT defacement; moderate operational impact.
+C0039,Versa Director Exploitation,MSP/ISP,84,Supply-chain zero-day; credential theft.
+C0037,Water Curupira Pikabot Distribution,Enterprise,68,Loader-to-ransomware chain; widespread distribution.
+C0052,SPACEHOP Activity,Multi-region scanning/exploitation,69,Infrastructure enabling APT ops; broad reconnaissance.
+C0026,Turla Re-targeting via ANDROMEDA,Ukraine,60,Reinfection campaigns; targeted espionage.
+C0027,Scattered Spider Telco Ops,Telecom/BPO,72,Privilege abuse; carrier-level access risk.
+C0032,Triton Pre-positioning IT,ICS/IT,75,Precursor to OT compromise; high potential severity.
+C0033,PROMETHIUM StrongPity Android,Mobile/Android,55,Spyware and C2; PII exfiltration; moderate scope.
+C0004,CostaRicto,Financial institutions,68,Espionage-for-hire; global reach; high data exposure.
+C0029,Cutting Edge (Ivanti VPN),DIB/Telecom,80,Edge-device zero-days; supply chain impact.
+C0053,FLORAHOX Activity,Cross-APT Infra,70,Shared obfuscation infra enabling multiple actors.
+C0001,Frankenstein,Multi-region,48,Targeted attacks; low systemic impact.
+C0041,FrostyGoop Incident,District Heating,88,ICS manipulation; public safety impact.
+C0007,FunnyDream,SE Asia Gov,58,Espionage; backdoors; data exposure.
+C0038,HomeLand Justice,Albania Gov,82,Destructive wiper/ransomware; government impact.
+C0043,Indian CI Intrusions,Utilities/Logistics,62,IT-side breaches; high criticality targets.
+C0044,Juicy Mix (OilRig Mango),Israel,60,Espionage via custom backdoors; data exposure.
+C0022,Operation Dream Job,Multi-sector,70,Lazarus lures; espionage + monetization.
+C0016,Operation Dust Storm,Japan CI,66,Long-term espionage; industrial targets.
+C0023,Operation Ghost,EU MoF/Embassy,72,Diplomatic espionage; high-sensitivity systems.
+C0006,Operation Honeybee,NGO/Humanitarian,52,Humanitarian phishing; moderate PII exposure.
+C0048,Operation MidnightEclipse,PAN-OS zero-day,82,Edge RCE; global credential theft risk.
+C0042,Outer Space,Israel,58,Downloader/backdoor chain; espionage.
+C0036,Pikabot Distribution (Feb 2024),Enterprise,64,Loader for ransomware; phishing-based.
+C0047,RedDelta PlugX Infection,East Asia,62,Persistent PlugX foothold; credential theft.
+C0045,ShadowRay,AI Infrastructure,68,AI infra exploitation; emerging risk.
+C0024,SolarWinds Compromise,Global/Gov,95,Nation-state supply chain attack; global scope.
+C0005,Operation Spalax,Colombia Gov/Energy,57,Commodity malware; regional reach.
+C0013,Operation Sharpshooter,Defense/Finance,66,Global espionage via fake job lures.
