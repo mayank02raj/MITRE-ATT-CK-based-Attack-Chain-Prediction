@@ -1,0 +1,314 @@
+{
+  "type": "bundle",
+  "id": "bundle--62471da4-3266-4471-b077-091b15f37f35",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.218Z",
+  "modified": "2025-07-30T19:47:13.218Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--e312fa60-4316-4433-a6eb-81e4c3111324",
+      "spec_version": "2.1",
+      "created": "2023-04-21T17:46:00.235Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--eb086431-6f09-4a86-9e42-8184f86b1864",
+      "start_refs": [
+        "attack-action--cb85f8b2-a64d-49a3-beca-c307558fe4cb"
+      ],
+      "name": "SearchAwesome Adware",
+      "description": "SearchAwesome adware intercepts encrypted web traffic to inject ads",
+      "scope": "malware",
+      "external_references": [
+        {
+          "source_name": "Malwarebytes Labs",
+          "description": "Blog",
+          "url": "https://www.malwarebytes.com/blog/news/2018/10/mac-malware-intercepts-encrypted-web-traffic-for-ad-injection"
+        },
+        {
+          "source_name": "Malware Behavior Catalogue",
+          "description": "GitHub",
+          "url": "https://github.com/MBCProject/mbc-markdown/blob/main/xample-malware/searchawesome.md"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--eb086431-6f09-4a86-9e42-8184f86b1864",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "name": "Lauren Parker",
+      "contact_information": "lparker@mitre.org"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--cb85f8b2-a64d-49a3-beca-c307558fe4cb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malicious File",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.002",
+      "technique_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+      "description": "The user opens a disk image file which invisibly installs its components",
+      "effect_refs": [
+        "attack-action--91742a64-73d0-4302-9b43-5ae374a7516a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--638fbd7e-e680-4360-86d5-29454f354071",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Install Root Certificate",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1553.004",
+      "technique_ref": "attack-pattern--c615231b-f253-4f58-9d47-d5b4cbdb6839",
+      "description": "The malware installs a certificate",
+      "effect_refs": [
+        "attack-action--912ab340-e636-4742-8333-f692368ef2ee"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--912ab340-e636-4742-8333-f692368ef2ee",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Adversary-in-the-Middle",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1557",
+      "technique_ref": "attack-pattern--035bb001-ab69-4a0b-9f6c-2de8b09e1b9d",
+      "description": "Malware inserts itself into a chain of custody, typically within network packets",
+      "effect_refs": [
+        "attack-action--f6677d9d-1c87-43bf-9b55-88099a820d4d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f6677d9d-1c87-43bf-9b55-88099a820d4d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Subvert Trust Controls",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1553",
+      "technique_ref": "attack-pattern--b83e166d-13d7-4b52-8677-dff90c548fd7",
+      "description": "The malware uses certificates to gain access to HTTPS traffic",
+      "effect_refs": [
+        "attack-action--ef2455bc-724f-4abf-9b1d-6883128ae328"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ef2455bc-724f-4abf-9b1d-6883128ae328",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "Malware installs an open-source program called mitmproxy",
+      "effect_refs": [
+        "attack-action--f829939a-e8cf-4d78-891c-35135405e046"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f829939a-e8cf-4d78-891c-35135405e046",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Proxy",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1090",
+      "technique_ref": "attack-pattern--731f4f55-b6d0-41d1-a7a9-072a66389aea",
+      "description": "Malware uses mitmproxy to intercept and modify web traffic",
+      "effect_refs": [
+        "attack-action--d545cf7c-c227-49e8-b3ef-6836f9431513"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d545cf7c-c227-49e8-b3ef-6836f9431513",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malvertising",
+      "tactic_id": "TA0042",
+      "tactic_ref": "x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400",
+      "technique_id": "T1583.008",
+      "technique_ref": "attack-pattern--155207c0-7f53-4f13-a06b-0a9907ef5096",
+      "description": "Malware intercepts encrypted web traffic to inject ads",
+      "effect_refs": [
+        "attack-action--5fb732fb-80d7-4815-ba89-44d18484ed94"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3ab0e565-c92d-40c0-a0d8-5795cd1fd6a2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Browser Session Hijacking",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "technique_id": "T1185",
+      "technique_ref": "attack-pattern--544b0346-29ad-41e1-a808-501bb4193f47",
+      "description": "Malware can modify web traffic for the purpose of injecting Javascript",
+      "effect_refs": [
+        "attack-action--9701d9a7-0c9b-4f07-b565-b01ffd871a36"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5fb732fb-80d7-4815-ba89-44d18484ed94",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Command and Scripting Interpreter",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059",
+      "technique_ref": "attack-pattern--7385dfaf-6886-4229-9ecd-6fd678040830",
+      "description": "Malware installs a script to inject a JavaScript script and modify web traffic",
+      "effect_refs": [
+        "attack-action--3ab0e565-c92d-40c0-a0d8-5795cd1fd6a2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--91742a64-73d0-4302-9b43-5ae374a7516a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "Malware receives data from the C2 server",
+      "effect_refs": [
+        "attack-action--638fbd7e-e680-4360-86d5-29454f354071"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9701d9a7-0c9b-4f07-b565-b01ffd871a36",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.218Z",
+      "modified": "2025-07-30T19:47:13.218Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File Deletion",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1070.004",
+      "technique_ref": "attack-pattern--d63a3fb8-9452-4e9d-a60a-54be68d5998c",
+      "description": "Malware will monitor if a specific file gets deleted and then will delete itself"
+    }
+  ]
+}

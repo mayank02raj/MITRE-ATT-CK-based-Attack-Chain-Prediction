@@ -1,0 +1,974 @@
+{
+  "type": "bundle",
+  "id": "bundle--a2106fd2-5ade-49fd-a28e-79f01942a26f",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.183Z",
+  "modified": "2025-07-30T19:47:13.183Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--058d93c8-baa2-46fb-b620-29d0fb2da0b5",
+      "spec_version": "2.1",
+      "created": "2022-10-27T02:44:54.520Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--9e9b1873-9550-4372-93fe-09ff299cf255",
+      "start_refs": [
+        "attack-action--94742c71-532b-4aa9-b437-41a9bb8f38d7",
+        "attack-action--f0cc9e44-bcff-4902-94ee-1579a13d8d88",
+        "attack-action--0941f1e9-24bd-43ab-b54b-ae01df08b989"
+      ],
+      "name": "REvil",
+      "description": "Profile of a ransomware group",
+      "scope": "malware",
+      "external_references": [
+        {
+          "source_name": "Bleeping Computer",
+          "description": "Article",
+          "url": "https://www.bleepingcomputer.com/news/security/healthcare-giant-grupo-fleury-hit-by-revil-ransomware-attack/"
+        },
+        {
+          "source_name": "Checkpoint",
+          "description": "article",
+          "url": "https://blog.checkpoint.com/2020/10/29/hospitals-targeted-in-rising-wave-of-ryuk-ransomware-attacks/"
+        },
+        {
+          "source_name": "Health IT Security",
+          "description": "article",
+          "url": "https://healthitsecurity.com/news/ransomware-hits-another-it-vendor-impacting-100-dental-providers"
+        },
+        {
+          "source_name": "HHS Cybersecurity Program",
+          "description": "PPT Briefing",
+          "url": "https://www.hhs.gov/sites/default/files/ransomware-trends-2021.pdf"
+        },
+        {
+          "source_name": "Secureworks",
+          "description": "article",
+          "url": "https://www.secureworks.com/research/revil-sodinokibi-ransomware"
+        },
+        {
+          "source_name": "TechTarget",
+          "description": "article",
+          "url": "https://www.techtarget.com/searchsecurity/news/252481164/Microsoft-warns-hospitals-of-impending-ransomware-attacks"
+        },
+        {
+          "source_name": "BBC",
+          "description": "article",
+          "url": "https://www.bbc.com/news/technology-55439190"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--9e9b1873-9550-4372-93fe-09ff299cf255",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "Jackie Lasky",
+      "identity_class": "individual",
+      "contact_information": "jlasky@mitre.org"
+    },
+    {
+      "type": "malware",
+      "id": "malware--2f794d5d-9480-441a-b9a3-7e8249da8b59",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "REvil",
+      "description": "ransomware family that has been linked to the GOLD SOUTHFIELD group and operated as ransomware-as-a-service (RaaS) since at least April 2019. REvil, which as been used against organizations in the manufacturing, transportation, and electric sectors, is highly configurable and shares code similarities with the GandCrab RaaS.",
+      "is_family": false,
+      "aliases": [
+        "Sodin",
+        "Sodinokibi"
+      ],
+      "first_seen": "2019-04-01T00:00:00.000Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--94742c71-532b-4aa9-b437-41a9bb8f38d7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Drive-by Compromise",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1189",
+      "technique_ref": "attack-pattern--d742a578-d70e-4d0e-96a6-02a9c30204e6",
+      "description": "Watering hole attacks on forum websites that download REvil onto the victim devices.",
+      "effect_refs": [
+        "attack-action--817870ea-bc9d-4734-a36d-8e3d966b2bc7"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f0cc9e44-bcff-4902-94ee-1579a13d8d88",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Spearphishing Attachment",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1566.001",
+      "technique_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+      "description": "Spam emails with attached\nMS Office Word documents\nincluding malicious macro\nto download ransomware to\ntarget system.",
+      "effect_refs": [
+        "attack-operator--f2b2f246-acf4-4169-b0d5-d492f9a6deb2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1ec51403-5eeb-4d38-97b8-cf3b426303f9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Deobfuscate/Decode Files or Information",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1140",
+      "technique_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+      "description": "REvil deobfuscates and decodes its own data and configuration",
+      "effect_refs": [
+        "attack-action--a8243150-f0db-47dd-b715-3fe09d331981"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a8243150-f0db-47dd-b715-3fe09d331981",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Create Process with Token",
+      "tactic_id": "TA0004",
+      "tactic_ref": "x-mitre-tactic--5e29b093-294e-49e9-a803-dab3d73b77dd",
+      "technique_id": "T1134.002",
+      "technique_ref": "attack-pattern--677569f9-a8b0-459e-ab24-7f18091fa7bf",
+      "description": "Verifies that it is running with administrative rights via making sure that TokenElevationType is set to TokenElevationTypeFull and its integrity level is set to a minimum level of High.\nHowever, if it is running with low integrity, it will use the RunAs command to relaunch a new instance of itself with administrative rights.",
+      "effect_refs": [
+        "attack-action--cbc2c498-0f40-4fba-bfd0-dbfeae60d993"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--817870ea-bc9d-4734-a36d-8e3d966b2bc7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploitation for Privilege Escalation",
+      "tactic_id": "TA0004",
+      "tactic_ref": "x-mitre-tactic--5e29b093-294e-49e9-a803-dab3d73b77dd",
+      "technique_id": "T1068",
+      "technique_ref": "attack-pattern--b21c3b2d-02e6-45b1-980b-e69051040839",
+      "description": "Attempts to run with elevated privileges by exploiting CVE-2018-8453 vulnerability to gain SYSTEM privileges on host.",
+      "effect_refs": [
+        "attack-operator--f2b2f246-acf4-4169-b0d5-d492f9a6deb2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--523ac20c-e73d-4899-a233-cd2c3fde4d08",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File and Directory Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1083",
+      "technique_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+      "description": "REvil has iterated through all folders and files residing on local fixed drives and verifies they are not included in config lists and has an exclude list as well.",
+      "effect_refs": [
+        "attack-condition--9b7f41f6-e24d-4db8-bcf5-f3b71fde83b9",
+        "attack-condition--99955aa5-f418-42af-a69a-059600fdc68d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--72266354-eb09-4f29-9704-2a6117285354",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data Encrypted for Impact",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1486",
+      "technique_ref": "attack-pattern--b80d107d-fa0d-4b60-9684-b0433e8bdba0",
+      "description": "REvil has used multithreading I/O completion ports and encrypt files It will encrypt the flagged files and drop a ransom note in each folder",
+      "effect_refs": [
+        "attack-condition--ec339915-3ebf-4f76-920d-4845ceaee0c1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9bdfeccc-64f3-4338-b58d-62b528437dac",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Internal Defacement",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1491.001",
+      "technique_ref": "attack-pattern--8c41090b-aa47-4331-986b-8c9a51a91103",
+      "description": "After encrypting all the files, REvil will\ncreate a bitmap image of the desktop in runtime with the text that comes with the config file prepared with the random extension and set this and the ransom note to the desktop background. The text will read \"You are infected!\" and it will explain where the user can go to read. instructions in the text file on the system.",
+      "effect_refs": [
+        "attack-action--c922e4f2-57ae-4e23-9d09-8c70edf725ae"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--611913ef-15ce-44cb-a885-2dda47cf134b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over C2 Channel",
+      "tactic_id": "TA0010",
+      "tactic_ref": "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462",
+      "technique_id": "T1041",
+      "technique_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+      "description": "REvil will take the data out of the victim’s environment"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f5f61076-5c5d-43f8-ac93-bd72e76fc4bc",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Asymmetric Cryptography",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1573.002",
+      "technique_ref": "attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada",
+      "description": "If flag is set, it will conceal C2 communications using an asymmetric key\nscheduling algorithm",
+      "effect_refs": [
+        "attack-action--611913ef-15ce-44cb-a885-2dda47cf134b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3cf7cc87-39df-481b-b31a-c253d405502f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Web Protocols",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1071.001",
+      "technique_ref": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+      "description": "if the \"net\" key is set to \"true\" then it will\ncommunicate with the C2 server via POST messages (to a list of domains in the config file) to send information using the HTTPS protocol",
+      "effect_refs": [
+        "attack-action--611913ef-15ce-44cb-a885-2dda47cf134b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c922e4f2-57ae-4e23-9d09-8c70edf725ae",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Query Registry",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1012",
+      "technique_ref": "attack-pattern--c32f7008-9fea-41f7-8366-5eb9b74bd896",
+      "description": "REvil queries the net configuration key value to determine if C2 communication should take place.",
+      "effect_refs": [
+        "attack-condition--571e759e-0d01-4085-a240-395a3a0f5a0a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b7bb4f4c-a1ce-4968-8887-0eb6516ec60e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Service Stop",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1489",
+      "technique_ref": "attack-pattern--20fb2507-d71c-455d-9b6d-6104461cf26b",
+      "description": "REvil will stop and delete services if name matches list of service in JavaScript\nObject Notation (JSON) config list and has terminated all processes specified by prc value.",
+      "effect_refs": [
+        "attack-action--813a31a7-9924-4088-86d8-526f14fffc05",
+        "attack-action--b8777ca1-4cf7-449c-8cd5-545d5e98693a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b8777ca1-4cf7-449c-8cd5-545d5e98693a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "REvil has used PowerShell\nto perform inhibit system\nrecovery technique.",
+      "effect_refs": [
+        "attack-operator--791f3d02-c199-4b1f-a529-cc9d9049a26f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--813a31a7-9924-4088-86d8-526f14fffc05",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Windows Command Shell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.003",
+      "technique_ref": "attack-pattern--d1fcf083-a721-4223-aedf-bf8960798d62",
+      "description": "REvil has used cmd.exe\nto perform inhibit system\nrecovery technique.",
+      "effect_refs": [
+        "attack-operator--791f3d02-c199-4b1f-a529-cc9d9049a26f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d65fcb15-abb0-4bc5-a97e-0ee5a1e7548c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Inhibit System Recovery",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1490",
+      "technique_ref": "attack-pattern--f5d8eed6-48a9-4cdf-a3d7-d1ffa99c3d2a",
+      "description": "REvil will destroy all shadow volumes\nof the victim machine and\ndisable protection of the\nrecovery boot",
+      "effect_refs": [
+        "attack-action--9e2b0afb-d172-4686-b453-64ad4ffec914"
+      ],
+      "command_ref": "process--e33fe116-5d8a-4ebd-b9c7-ddd07d7a8c17"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9e2b0afb-d172-4686-b453-64ad4ffec914",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data Destruction",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1485",
+      "technique_ref": "attack-pattern--d45a3d09-b3cf-48f4-9f0f-f521ee5cb05c",
+      "description": "All the files and folders listed will be zeroed out and deleted with random trash or NULL values.",
+      "effect_refs": [
+        "attack-action--523ac20c-e73d-4899-a233-cd2c3fde4d08"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--37cc493d-eefc-4a85-a78d-8160d4007a5d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Owner/User Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1033",
+      "technique_ref": "attack-pattern--03d7999c-1f4c-42cc-8373-e7690d318104",
+      "description": "REvil will collect the current username from the victim's machine.",
+      "effect_refs": [
+        "attack-operator--4e9c4886-42d1-4799-be98-f24e9bdf4b50"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--30e17d35-9f5e-4e65-b2c1-6ea8ac7c3f54",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Information Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1082",
+      "technique_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+      "description": "REvil will continue to profile and search for hostname, fixed drive details, central processing unit (CPU) architecture, keyboard layout information, volume serial number for system drive, and the operating system product name.",
+      "effect_refs": [
+        "attack-operator--4e9c4886-42d1-4799-be98-f24e9bdf4b50"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b1025067-bb3b-446f-aa45-d97591c24ef0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obfuscated Files or Information",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1027",
+      "technique_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+      "description": "Has obfuscated user profile\ninformation, modules/functions, and will encrypt components from the configuration data stored in the Registry. All strings have also been encrypted\nwith RC4 before use.",
+      "effect_refs": [
+        "attack-action--a85199ff-3207-4c2c-828e-c7f56244e5ef"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a85199ff-3207-4c2c-828e-c7f56244e5ef",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Modify Registry",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1112",
+      "technique_ref": "attack-pattern--57340c81-c025-4189-8fa0-fc7ede51bae4",
+      "description": "REvil stores encrypted system information added to the Registry. It will check if it is already generated and stored the session encryption keys in the victim’s Registry.",
+      "effect_refs": [
+        "attack-action--b7bb4f4c-a1ce-4968-8887-0eb6516ec60e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--57f02194-5e28-4c95-a7d8-716317f2b081",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Domain Groups",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1069.002",
+      "technique_ref": "attack-pattern--2aed01ad-3df3-4410-a8cb-11ea4ded587c",
+      "description": "REvil will search the workgroup to collect\ndomain group information.",
+      "effect_refs": [
+        "attack-operator--4e9c4886-42d1-4799-be98-f24e9bdf4b50"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--cbc2c498-0f40-4fba-bfd0-dbfeae60d993",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Query Registry",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1012",
+      "technique_ref": "attack-pattern--c32f7008-9fea-41f7-8366-5eb9b74bd896",
+      "description": "Checks the Registry to see\nif it has already generated\nand stored session\nencryption keys.",
+      "effect_refs": [
+        "attack-action--57f02194-5e28-4c95-a7d8-716317f2b081",
+        "attack-action--37cc493d-eefc-4a85-a78d-8160d4007a5d",
+        "attack-action--30e17d35-9f5e-4e65-b2c1-6ea8ac7c3f54"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0941f1e9-24bd-43ab-b54b-ae01df08b989",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malicious File",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.002",
+      "technique_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+      "description": "Lures victim into clicking\nto enable content that\nlaunches the code hidden\nin macros.",
+      "effect_refs": [
+        "attack-operator--f2b2f246-acf4-4169-b0d5-d492f9a6deb2"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--99955aa5-f418-42af-a69a-059600fdc68d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "File or folder is whitelisted"
+    },
+    {
+      "type": "tool",
+      "id": "tool--8c5286e7-67a4-4950-bc2d-9087da482eed",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "Salsa20 Stream Cipher",
+      "description": "Encrypts files simultaneously with the Salsa2.0 algorithm",
+      "tool_types": [
+        "Algorithm"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--771a56bf-dad7-4ba1-bfae-547348bdee18",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "9781xsd4-HOW-TO-DECRYPT.txt"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--ec339915-3ebf-4f76-920d-4845ceaee0c1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "encryption is successful"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--9b7f41f6-e24d-4db8-bcf5-f3b71fde83b9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "-nolan switch was passed to binary when launched"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--446454d9-1612-41b5-8f6a-d282e06b52af",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Share Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1135",
+      "technique_ref": "attack-pattern--3489cfc5-640f-4bb3-a103-9137b97de79f",
+      "description": "REvil attempts to identify attached network shares and encrypt their contents",
+      "effect_refs": [
+        "attack-action--72266354-eb09-4f29-9704-2a6117285354"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--571e759e-0d01-4085-a240-395a3a0f5a0a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Check if network configuration key is set to True"
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--f2b2f246-acf4-4169-b0d5-d492f9a6deb2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--1ec51403-5eeb-4d38-97b8-cf3b426303f9"
+      ]
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--f4978309-1523-4c05-b2b5-4d46d3bb6502",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\recfg\\stat"
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--791f3d02-c199-4b1f-a529-cc9d9049a26f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--d65fcb15-abb0-4bc5-a97e-0ee5a1e7548c"
+      ]
+    },
+    {
+      "type": "process",
+      "id": "process--e33fe116-5d8a-4ebd-b9c7-ddd07d7a8c17",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "command_line": "cmd.exe /c vssadmin.exe Delete Shadows / All /Quiet & bcdedit /set {default} recoveryenabled No & bcdedit /set {default} bootstatuspolicy ignoreallfailures"
+    },
+    {
+      "type": "tool",
+      "id": "tool--c852c2b1-e8ef-40ae-910c-ff5aba6cd35f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "Batch Script",
+      "description": "kill.bat",
+      "tool_types": [
+        "impact"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--325c268a-4f1f-490c-a68a-5009bf4d54a8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "ECIES algorithm and AES-256-CTR",
+      "tool_types": [
+        "Algorithm"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--5ea98d86-c33b-4f93-8488-e60cf6692ce1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "name": "CVE-2018-8453",
+      "description": "An elevation of privilege vulnerability exists in Windows when the Win32k component fails to properly handle objects in memory, aka \"Win32k Elevation of Privilege Vulnerability.\" This affects Windows 7, Windows Server 2012 R2, Windows RT 8.1, Windows Server 2008, Windows Server 2019, Windows Server 2012, Windows 8.1, Windows Server 2016, Windows Server 2008 R2, Windows 10, Windows 10 Servers."
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--4e9c4886-42d1-4799-be98-f24e9bdf4b50",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--b1025067-bb3b-446f-aa45-d97591c24ef0"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13b72e0b-a65a-4888-a33e-741f6ca78ec2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--2f794d5d-9480-441a-b9a3-7e8249da8b59",
+      "target_ref": "attack-action--94742c71-532b-4aa9-b437-41a9bb8f38d7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--077771ff-d92c-465d-b823-f2cc5e4894d1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--2f794d5d-9480-441a-b9a3-7e8249da8b59",
+      "target_ref": "attack-action--f0cc9e44-bcff-4902-94ee-1579a13d8d88"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2b1566f-646e-47f5-91b2-b3daf01f7cf3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--2f794d5d-9480-441a-b9a3-7e8249da8b59",
+      "target_ref": "attack-action--0941f1e9-24bd-43ab-b54b-ae01df08b989"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--151f53f0-fc73-4557-ad23-0dac0c992d3d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--817870ea-bc9d-4734-a36d-8e3d966b2bc7",
+      "target_ref": "vulnerability--5ea98d86-c33b-4f93-8488-e60cf6692ce1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d391dac4-2c4e-4811-b57c-066a7af3ace7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--72266354-eb09-4f29-9704-2a6117285354",
+      "target_ref": "tool--8c5286e7-67a4-4950-bc2d-9087da482eed"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--624acff3-41a1-469b-a1c7-9e78593d126b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--9bdfeccc-64f3-4338-b58d-62b528437dac",
+      "target_ref": "file--771a56bf-dad7-4ba1-bfae-547348bdee18"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a73f232-484f-4cd5-acc8-e1c2f4a02beb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--f5f61076-5c5d-43f8-ac93-bd72e76fc4bc",
+      "target_ref": "tool--325c268a-4f1f-490c-a68a-5009bf4d54a8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c6ee06b4-7452-4bbd-994b-bb2ab573f8a6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--b7bb4f4c-a1ce-4968-8887-0eb6516ec60e",
+      "target_ref": "tool--c852c2b1-e8ef-40ae-910c-ff5aba6cd35f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a67bf1e-d1f5-4bb1-8126-301a55ae1762",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--a85199ff-3207-4c2c-828e-c7f56244e5ef",
+      "target_ref": "windows-registry-key--f4978309-1523-4c05-b2b5-4d46d3bb6502"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e4fe441e-1cd9-4114-9c93-62c8933ff14e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--99955aa5-f418-42af-a69a-059600fdc68d",
+      "target_ref": "attack-action--72266354-eb09-4f29-9704-2a6117285354"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa653c0b-edb2-4632-9f4c-5f04ca3b79c2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--ec339915-3ebf-4f76-920d-4845ceaee0c1",
+      "target_ref": "attack-action--9bdfeccc-64f3-4338-b58d-62b528437dac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--751142c1-e209-4079-8135-9788e0c6e89e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--9b7f41f6-e24d-4db8-bcf5-f3b71fde83b9",
+      "target_ref": "attack-action--446454d9-1612-41b5-8f6a-d282e06b52af"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe65eee4-85d3-4248-a973-08499210503e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--9b7f41f6-e24d-4db8-bcf5-f3b71fde83b9",
+      "target_ref": "attack-action--72266354-eb09-4f29-9704-2a6117285354"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f3103aae-80cd-4f71-bdb7-5a0f9d4b7382",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--571e759e-0d01-4085-a240-395a3a0f5a0a",
+      "target_ref": "attack-action--3cf7cc87-39df-481b-b31a-c253d405502f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c98e1c57-7a64-4994-a6a1-7189fe37789d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.183Z",
+      "modified": "2025-07-30T19:47:13.183Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--571e759e-0d01-4085-a240-395a3a0f5a0a",
+      "target_ref": "attack-action--f5f61076-5c5d-43f8-ac93-bd72e76fc4bc"
+    }
+  ]
+}

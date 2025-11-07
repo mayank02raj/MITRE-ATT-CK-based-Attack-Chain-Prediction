@@ -1,0 +1,1252 @@
+{
+  "type": "bundle",
+  "id": "bundle--5522b2f7-fc0b-443d-b633-261d804a2a25",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.082Z",
+  "modified": "2025-07-30T19:47:13.082Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--cf6ab2ef-d55d-4e1f-90fe-79a2cf8ad65f",
+      "spec_version": "2.1",
+      "created": "2023-11-15T20:44:39.577Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--43b8406a-990d-4806-9c58-a9be9b993ea3",
+      "start_refs": [
+        "attack-action--e846ce14-d8d4-4d87-aa1c-4581a52e0642"
+      ],
+      "name": "Maastricht University Ransomware",
+      "description": "In 2019, the Maastricht University was targeted by a ransomware attack. At least 267 internal servers were affected in this incident.",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "Fox-IT Report",
+          "description": "A detailed investigation of the incident written by Fox-IT security group. The report is written in Dutch. An executive summary exists in English but it is not as detailed as the original report.",
+          "url": "https://www.maastrichtuniversity.nl/nl/file/foxitrapportreactieuniversiteitmaastrichtnl10-02pdf"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--43b8406a-990d-4806-9c58-a9be9b993ea3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "name": "Joni Bimbashi"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e846ce14-d8d4-4d87-aa1c-4581a52e0642",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Phishing: Spearphishing Attachment",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1566.001",
+      "technique_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+      "description": "Malicious Microsoft Excel file is attached in a phishing campaign",
+      "effect_refs": [
+        "attack-condition--992c80ba-7ccb-4c32-9db1-8c17e7a5f04a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--47ffc519-7b5c-419d-8b4d-d738abb1ef1f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "User Execution: Malicious File",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.002",
+      "technique_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+      "description": "A malware is downloaded through Excel Macros and executed into the victim's server",
+      "effect_refs": [
+        "attack-action--337ea15a-8eff-4e01-91e9-13b4aa809986",
+        "attack-action--b2f0f8a2-7563-46ea-90fe-924b943e5374",
+        "attack-action--8b19cc76-f722-4b26-8100-5f96c5437ee8"
+      ],
+      "asset_refs": [
+        "attack-asset--54a593cb-d5bf-4e36-9316-e6a8b6ea66d2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b2f0f8a2-7563-46ea-90fe-924b943e5374",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "technique_id": "T1547.001",
+      "technique_ref": "attack-pattern--9efb1ea7-c37b-4595-9640-b7680cd84279",
+      "description": "Malware registers itself as an autostart application on boot in Windows system registry"
+    },
+    {
+      "type": "malware",
+      "id": "malware--b7f232ba-3aff-4136-8e7a-51bd71f07477",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "name": "SDBBot",
+      "is_family": true,
+      "capabilities": [
+        "communicates-with-c2, installs-other-components"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--a07bffca-be48-4851-845f-448b80cd52fa",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "name": "Malicious URL",
+      "description": "The Excel Macro contained URLs from which the malware was downloaded.",
+      "infrastructure_types": [
+        "hosting-malware"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--dd754138-ed6d-4ab5-8b84-453c5bee8441",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "value": "185.255.17.99"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f32ea8d4-0879-4387-86a3-6222bef6ce34",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "value": "185.212.128.146"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--337ea15a-8eff-4e01-91e9-13b4aa809986",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Non-Application Layer Protocol",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1095",
+      "technique_ref": "attack-pattern--c21d5a77-d422-4a69-acd7-2c53c1faa34b",
+      "description": "The malware communicates with C2 server over TCP every 15 minutes"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--c09c1367-7f4c-4e12-b107-89eedecfca5d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "name": "C2 Server",
+      "infrastructure_types": [
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d44d8b95-8734-4bcf-9fba-8ac647fd2e1b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "value": "195.123.242.250"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8b19cc76-f722-4b26-8100-5f96c5437ee8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Command and Scripting Interpreter: \nUnix Shell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.004",
+      "technique_ref": "attack-pattern--a9d4b653-6915-42af-98b2-5758c4ceee56",
+      "description": "An interactive shell is deployed by another malware included in SDBBot",
+      "effect_refs": [
+        "attack-action--986b710d-19da-4022-86fb-27df6ee27515",
+        "attack-action--0db59e5b-1282-4709-ab0f-ae39ad624351",
+        "attack-action--58f2e28f-0e34-49dc-af49-ca0906474990"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--9f62a94b-731c-4e25-8e95-43272b157004",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.082Z",
+      "modified": "2025-07-30T19:47:13.082Z",
+      "name": "Meterpreter",
+      "description": "A payload of Metasploit that provides an interactive shell to the attacker. The shell is not written on the victim's drives but it is located in memory. This malware was included inside the SSDBot.",
+      "is_family": false,
+      "capabilities": [
+        "controls-local-machine"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--986b710d-19da-4022-86fb-27df6ee27515",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploitation of Remote Services",
+      "tactic_id": "TA0008",
+      "tactic_ref": "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e",
+      "technique_id": "T1210",
+      "technique_ref": "attack-pattern--9db0cf3a-a3c9-4012-8268-123b9db6fd82",
+      "description": "Attacker spreads Meterpreter malware to different internal servers through an unpatched vulnerability",
+      "confidence": 70,
+      "effect_refs": [
+        "attack-action--f5e02545-48d0-48ed-8452-558605dc32be"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--b113d04b-6ea4-4123-ace1-964588635334",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "CVE-2017-0144",
+      "description": "EternalBlue vulnerability"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f5e02545-48d0-48ed-8452-558605dc32be",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploitation for Privilege Escalation",
+      "tactic_id": "TA0004",
+      "tactic_ref": "x-mitre-tactic--5e29b093-294e-49e9-a803-dab3d73b77dd",
+      "technique_id": "T1068",
+      "technique_ref": "attack-pattern--b21c3b2d-02e6-45b1-980b-e69051040839",
+      "description": "Attacker gains access to local SYSTEM account through a vulnerability",
+      "confidence": 70,
+      "effect_refs": [
+        "attack-condition--59f1a81d-5930-41d7-87fd-25297217ad6f"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--252deec9-14be-44b0-a7bc-c221dbbe690d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "PowerSploit",
+      "description": "Collection of PowerShell scripts designed for penetration testing",
+      "tool_types": [
+        "information-gathering, vulnerability-scanning"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0db59e5b-1282-4709-ab0f-ae39ad624351",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote System Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1018",
+      "technique_ref": "attack-pattern--e358d692-23c0-4a31-9eb6-ecc13a8d7735",
+      "description": "Attacker discovers internal Active Directory hosts in the domain"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--58f2e28f-0e34-49dc-af49-ca0906474990",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Active Scanning: Vulnerability Scanning",
+      "tactic_id": "TA0043",
+      "tactic_ref": "x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592",
+      "technique_id": "T1595.002",
+      "technique_ref": "attack-pattern--5502c4e9-24ef-4d5f-8ee9-9e906c2f82c4",
+      "description": "Attacker checks for vulnerable hosts within the domain"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--59f1a81d-5930-41d7-87fd-25297217ad6f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The compromised server has a system with the highest domain administration privileges"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b2302d5c-7e98-4bf2-857b-609b68bc30a7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "OS Credential Dumping: LSASS Memory",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1003.001",
+      "technique_ref": "attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+      "description": "Attacker retrieves the login credential stored in memory from a recent login activity",
+      "confidence": 70,
+      "effect_refs": [
+        "attack-condition--e69292c5-8732-425b-98ce-1715818303c5"
+      ],
+      "asset_refs": [
+        "attack-asset--8d809eec-2683-4611-8556-51be547a93c9"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--e69292c5-8732-425b-98ce-1715818303c5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Attacker successfully recovers login credentials to the administrator account of the domain"
+    },
+    {
+      "type": "malware",
+      "id": "malware--cc4e6f50-e9be-4a05-a8f7-f898d0691d81",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "Cobalt Strike",
+      "description": "A paid commercial penetration testing framework with C2C capabilities.",
+      "is_family": false,
+      "capabilities": [
+        "controls-local-machine",
+        "communicates-with-c2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--72b25a1c-bd74-4d2b-acce-774967a3d6d3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote System Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1018",
+      "technique_ref": "attack-pattern--e358d692-23c0-4a31-9eb6-ecc13a8d7735",
+      "description": "Attackers discovers all active servers in the domain",
+      "effect_refs": [
+        "attack-operator--04261ee7-45e9-437d-8838-8ca60c2f553a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--694536a5-19cc-4b18-b8f4-17da494e9b3d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Command and Scripting Interpreter",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059",
+      "technique_ref": "attack-pattern--7385dfaf-6886-4229-9ecd-6fd678040830",
+      "description": "Attacker has execution access on the machine",
+      "effect_refs": [
+        "attack-action--72b25a1c-bd74-4d2b-acce-774967a3d6d3",
+        "attack-action--e67187bf-184c-4c98-9aff-9c53cd08506b",
+        "attack-action--de70e8df-2907-4885-b3c2-c13dbe144030"
+      ],
+      "asset_refs": [
+        "attack-asset--5bea1edc-db00-43cb-9b85-07425895790f"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--04261ee7-45e9-437d-8838-8ca60c2f553a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--5d119bee-b5dc-4ace-b7d9-6b69d7bd1b76"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--a53a9a5a-f97e-4f60-82fb-481924673b12",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "abstract": "Speculation",
+      "content": "The authors of the incident report were unable to find any traces/evidence of EternalBlue exploitation/usage in their post-mortem investigation. The report suggests that EternalBlue was likely utilised by the threat actor as some internal systems were outdated and missing a Microsoft-issued patch addressing the EternalBlue exploit at the time of the attack. However, the authors also state that one internal machines was also infected that was not vulnerable to the EternalBlue exploit.",
+      "object_refs": [
+        "attack-action--986b710d-19da-4022-86fb-27df6ee27515"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--54a593cb-d5bf-4e36-9316-e6a8b6ea66d2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Client-domain workstations",
+      "description": "The compromised servers are clients of the UNIMAAS domain."
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--8d809eec-2683-4611-8556-51be547a93c9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Administration-domain workstation",
+      "description": "The compromised server is an administrator of the UNIMAAS domain. A system with the highest privileges in the victim's network."
+    },
+    {
+      "type": "tool",
+      "id": "tool--b0e29627-147c-45f5-b4eb-30f6ecfb5c3c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "PingCastle",
+      "description": "Discovers Active Directory clients in an internal network. It can also build a graph visualising the structure of the network's Active Directory",
+      "tool_types": [
+        "information-gathering"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--cc6a1359-828a-4c8e-b6b1-86787e6388cb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "Meterpreter",
+      "description": "A payload of Metasploit that provides an interactive shell to the attacker.",
+      "is_family": false,
+      "capabilities": [
+        "controls-local-machine"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--e140385f-12c7-4a46-b271-ce63eb980059",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "PingCastle",
+      "description": "Discovers Active Directory clients in an internal network.",
+      "tool_types": [
+        "information-gathering"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--51000e23-7748-49e3-bed5-aa3a8ea657d5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "AdFind",
+      "description": "Commercial software for performing penetration tests, similar to Metasploit.",
+      "tool_types": [
+        "vulnerability-scanning",
+        "information-gathering"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--de70e8df-2907-4885-b3c2-c13dbe144030",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Service Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1046",
+      "technique_ref": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+      "description": "Attacker creates an overview of the entire domain by scanning for services running on the servers within the victim's network",
+      "effect_refs": [
+        "attack-operator--04261ee7-45e9-437d-8838-8ca60c2f553a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e67187bf-184c-4c98-9aff-9c53cd08506b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Process Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1057",
+      "technique_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+      "description": "Attacker creates an overview of the entire domain by scanning for processes running on the servers within the victim's network",
+      "effect_refs": [
+        "attack-operator--04261ee7-45e9-437d-8838-8ca60c2f553a"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--a3bb0fe0-f051-4269-9324-8e302017a69c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "GraceRAT",
+      "threat_actor_types": [
+        "crime-syndicate"
+      ],
+      "aliases": [
+        "TA505"
+      ],
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5d119bee-b5dc-4ace-b7d9-6b69d7bd1b76",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "Using domain administrator privileges, the attacker places malicious software on internal servers as a preparation for deploying a ransomware attack.",
+      "effect_refs": [
+        "attack-condition--aecc220e-638e-4f1d-8437-8eabab5a3c19"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--aecc220e-638e-4f1d-8437-8eabab5a3c19",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Malicious software is detected by McAfee antivirus"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1ef2bbee-79c3-4b92-b0c8-acc139984154",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Impair Defense: Disable or Modify Tools",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1562.001",
+      "technique_ref": "attack-pattern--ac08589e-ee59-4935-8667-d845e38fe579",
+      "description": "Using local administrator account, attacker disables and uninstalls McAfee antivirus from the server",
+      "effect_refs": [
+        "attack-action--75bcb6d2-a7b0-4985-81f2-8f1335f8aa12"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--75bcb6d2-a7b0-4985-81f2-8f1335f8aa12",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Impair Defenses: Disable or Modify Tools",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1562.001",
+      "technique_ref": "attack-pattern--ac08589e-ee59-4935-8667-d845e38fe579",
+      "description": "Using local administrator account, attacker disables Microsoft Defender from the server",
+      "effect_refs": [
+        "attack-action--24aad6b2-b3ed-4a91-912c-aecc31d43dab"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--07feb4d6-b46d-4d85-90e2-5cf30120cdfe",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "sage.exe",
+      "description": "Tool used by the attacker for deploying ransomware and disabling Microsoft Defender in a system.",
+      "tool_types": [
+        "malicious"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--24aad6b2-b3ed-4a91-912c-aecc31d43dab",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data Encrypted for Impact",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1486",
+      "technique_ref": "attack-pattern--b80d107d-fa0d-4b60-9684-b0433e8bdba0",
+      "description": "Attacker launches ransomware attack on all infected servers in the UNIMAAS domain.",
+      "asset_refs": [
+        "attack-asset--96392c91-e1af-4a85-85f5-43446ed0fd25",
+        "attack-asset--98cb2f65-f0bc-4a1b-8cb5-90e8cd77de5b",
+        "attack-asset--2652519b-d67d-4a2e-8c4d-1ecfbfa7ece7",
+        "attack-asset--ce84fa15-b535-436a-80ff-2fd6b62ffc43"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--6d7dde23-9b25-4b4c-9ee3-a290c827c5be",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "swapq.exe",
+      "description": "Tool for launching ransomware",
+      "tool_types": [
+        "malicious"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--ce84fa15-b535-436a-80ff-2fd6b62ffc43",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Domain Controller"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--2652519b-d67d-4a2e-8c4d-1ecfbfa7ece7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exchange Servers"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--98cb2f65-f0bc-4a1b-8cb5-90e8cd77de5b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Backup Servers",
+      "description": "Only a few backup servers were affected"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--96392c91-e1af-4a85-85f5-43446ed0fd25",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File Servers",
+      "description": "These servers contained data for research and business operations"
+    },
+    {
+      "type": "process",
+      "id": "process--2204e910-f21f-4864-9d88-b5f4c8cacc63",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "command_line": "psxexesvc"
+    },
+    {
+      "type": "directory",
+      "id": "directory--80bd70ce-636d-4d3b-8c38-af7b5285c006",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "path": "C:\\Users\\Public\\Music"
+    },
+    {
+      "type": "process",
+      "id": "process--86793753-3899-4716-ab41-b3b1eae2e2d3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "command_line": "Winsysstrinsag"
+    },
+    {
+      "type": "malware",
+      "id": "malware--d054b1ab-4ca9-41f5-9584-e708edf0227d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "name": "Clop",
+      "description": "Encrypts all files in the systems except those that are critical for running the Windows system",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": false,
+      "capabilities": [
+        "compromises-data-availability",
+        "compromises-data-integrity"
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--959d0827-ca8d-4531-b89a-f75dbd13d04e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "value": "windows-afx-update[.]com"
+    },
+    {
+      "type": "url",
+      "id": "url--dea07f1b-ff05-4c73-a4db-b4e3316c71f2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "value": "windows-en-us-update[.]com"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--992c80ba-7ccb-4c32-9db1-8c17e7a5f04a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "User opens the infected Microsoft Excel file on the server"
+    },
+    {
+      "type": "url",
+      "id": "url--b45d8b98-da2f-422f-bc26-8689b8d5eb1e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "value": "drm-server13-login-microsoftonline[.]com"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--5bea1edc-db00-43cb-9b85-07425895790f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "UNIMAAS domain",
+      "description": "The attacker now possess administrative control over the internal (network) domain of the enterprise"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--610d4a29-faf8-4c86-967d-1529da94b180",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--47ffc519-7b5c-419d-8b4d-d738abb1ef1f",
+      "target_ref": "malware--b7f232ba-3aff-4136-8e7a-51bd71f07477"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa917cb5-b0c2-4b09-ac47-0969ea5f3b4d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--47ffc519-7b5c-419d-8b4d-d738abb1ef1f",
+      "target_ref": "infrastructure--a07bffca-be48-4851-845f-448b80cd52fa"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--14426daf-ad22-4b4c-9a5b-bc6dc01f3708",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--b7f232ba-3aff-4136-8e7a-51bd71f07477",
+      "target_ref": "malware--9f62a94b-731c-4e25-8e95-43272b157004"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4425062f-da7c-457a-a3a7-ca2ede6f6050",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "infrastructure--a07bffca-be48-4851-845f-448b80cd52fa",
+      "target_ref": "url--959d0827-ca8d-4531-b89a-f75dbd13d04e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4316c4dd-ab0e-4ee8-bad6-6c7edc985be4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "infrastructure--a07bffca-be48-4851-845f-448b80cd52fa",
+      "target_ref": "url--dea07f1b-ff05-4c73-a4db-b4e3316c71f2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4746995b-8fc0-445e-9f92-9be358a2fc8c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--337ea15a-8eff-4e01-91e9-13b4aa809986",
+      "target_ref": "infrastructure--c09c1367-7f4c-4e12-b107-89eedecfca5d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d566b439-f3d3-41f9-b81c-c06d05f872ee",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "infrastructure--c09c1367-7f4c-4e12-b107-89eedecfca5d",
+      "target_ref": "url--b45d8b98-da2f-422f-bc26-8689b8d5eb1e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f79df954-0223-497a-a61e-783590ffc4ae",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--8b19cc76-f722-4b26-8100-5f96c5437ee8",
+      "target_ref": "malware--9f62a94b-731c-4e25-8e95-43272b157004"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5eda310c-2f84-464b-895f-acef2b4fff62",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--986b710d-19da-4022-86fb-27df6ee27515",
+      "target_ref": "vulnerability--b113d04b-6ea4-4123-ace1-964588635334"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04c4c918-6303-4afd-a7ad-09177c38d835",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--f5e02545-48d0-48ed-8452-558605dc32be",
+      "target_ref": "vulnerability--b113d04b-6ea4-4123-ace1-964588635334"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9766e5bd-f253-487d-bfa6-c54e870c8c05",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--0db59e5b-1282-4709-ab0f-ae39ad624351",
+      "target_ref": "tool--252deec9-14be-44b0-a7bc-c221dbbe690d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--41e6d8de-04fc-45c4-b7af-ce85cd82df43",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--0db59e5b-1282-4709-ab0f-ae39ad624351",
+      "target_ref": "tool--b0e29627-147c-45f5-b4eb-30f6ecfb5c3c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c91cf7bd-99d6-434b-9eb4-3cdb6c6611d0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--58f2e28f-0e34-49dc-af49-ca0906474990",
+      "target_ref": "tool--252deec9-14be-44b0-a7bc-c221dbbe690d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1f56b2a-698c-4913-b57f-853113da052c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--59f1a81d-5930-41d7-87fd-25297217ad6f",
+      "target_ref": "attack-action--8b19cc76-f722-4b26-8100-5f96c5437ee8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--990021ec-d45d-47b5-b207-4f1483eb8d1c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--59f1a81d-5930-41d7-87fd-25297217ad6f",
+      "target_ref": "attack-action--b2302d5c-7e98-4bf2-857b-609b68bc30a7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d75a385a-541d-4321-82fa-e80ca5d47e1b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--e69292c5-8732-425b-98ce-1715818303c5",
+      "target_ref": "attack-action--694536a5-19cc-4b18-b8f4-17da494e9b3d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fccb8bac-80cf-400d-bd9b-ed3c21db1571",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--72b25a1c-bd74-4d2b-acce-774967a3d6d3",
+      "target_ref": "tool--e140385f-12c7-4a46-b271-ce63eb980059"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--483a62c6-b12d-47b2-8de5-a28a9bc5d3fc",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--694536a5-19cc-4b18-b8f4-17da494e9b3d",
+      "target_ref": "malware--cc4e6f50-e9be-4a05-a8f7-f898d0691d81"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--140f25db-1f2a-47cf-b0b8-953697540d71",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--694536a5-19cc-4b18-b8f4-17da494e9b3d",
+      "target_ref": "malware--cc6a1359-828a-4c8e-b6b1-86787e6388cb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a219a29d-ff4d-4b0a-a3d0-a74db9fbb85f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--de70e8df-2907-4885-b3c2-c13dbe144030",
+      "target_ref": "tool--51000e23-7748-49e3-bed5-aa3a8ea657d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--caf244d3-42b8-4700-b6a4-648c78edd146",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--e67187bf-184c-4c98-9aff-9c53cd08506b",
+      "target_ref": "tool--51000e23-7748-49e3-bed5-aa3a8ea657d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3db49623-8123-4d46-9ae6-7f142c9b4707",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--5d119bee-b5dc-4ace-b7d9-6b69d7bd1b76",
+      "target_ref": "tool--07feb4d6-b46d-4d85-90e2-5cf30120cdfe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b5e4579-ba06-40c2-ad41-783bd5f24c51",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--aecc220e-638e-4f1d-8437-8eabab5a3c19",
+      "target_ref": "attack-action--1ef2bbee-79c3-4b92-b0c8-acc139984154"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72cbf6fa-da12-4220-8d55-a6b4a1c7a3b1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--aecc220e-638e-4f1d-8437-8eabab5a3c19",
+      "target_ref": "attack-action--75bcb6d2-a7b0-4985-81f2-8f1335f8aa12"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a809ce9-0de4-4829-901b-7d8a94893460",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--75bcb6d2-a7b0-4985-81f2-8f1335f8aa12",
+      "target_ref": "tool--07feb4d6-b46d-4d85-90e2-5cf30120cdfe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e1d4420c-86a6-41a1-a105-24c8eef9201d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "tool--07feb4d6-b46d-4d85-90e2-5cf30120cdfe",
+      "target_ref": "tool--6d7dde23-9b25-4b4c-9ee3-a290c827c5be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8e5d465-c2d7-4903-9598-f8a51c983280",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "tool--07feb4d6-b46d-4d85-90e2-5cf30120cdfe",
+      "target_ref": "directory--80bd70ce-636d-4d3b-8c38-af7b5285c006"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3faa7dc-3d51-4b65-9683-3b479b05a115",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "tool--07feb4d6-b46d-4d85-90e2-5cf30120cdfe",
+      "target_ref": "process--86793753-3899-4716-ab41-b3b1eae2e2d3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b197039b-486c-424e-8e19-97adc320ad15",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--24aad6b2-b3ed-4a91-912c-aecc31d43dab",
+      "target_ref": "tool--6d7dde23-9b25-4b4c-9ee3-a290c827c5be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f157f6b-2129-4cab-ad05-7c05ee7ebaad",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "tool--6d7dde23-9b25-4b4c-9ee3-a290c827c5be",
+      "target_ref": "process--2204e910-f21f-4864-9d88-b5f4c8cacc63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--380fc725-1110-4fd7-8ce3-4a2ddc197b1e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "tool--6d7dde23-9b25-4b4c-9ee3-a290c827c5be",
+      "target_ref": "malware--d054b1ab-4ca9-41f5-9584-e708edf0227d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fdb0f4c9-71a3-4702-9180-4fa5c13bacf3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "url--959d0827-ca8d-4531-b89a-f75dbd13d04e",
+      "target_ref": "ipv4-addr--dd754138-ed6d-4ab5-8b84-453c5bee8441"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d698264e-775a-4dcb-b7e7-d0bebae6c7b2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "url--dea07f1b-ff05-4c73-a4db-b4e3316c71f2",
+      "target_ref": "ipv4-addr--f32ea8d4-0879-4387-86a3-6222bef6ce34"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--81b7c152-ec6b-4f0c-b2cb-9c456a6f47e6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--992c80ba-7ccb-4c32-9db1-8c17e7a5f04a",
+      "target_ref": "attack-action--47ffc519-7b5c-419d-8b4d-d738abb1ef1f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fcc642b5-fe8e-4c5b-8aec-0dfc9bc4b3ff",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.083Z",
+      "modified": "2025-07-30T19:47:13.083Z",
+      "relationship_type": "related-to",
+      "source_ref": "url--b45d8b98-da2f-422f-bc26-8689b8d5eb1e",
+      "target_ref": "ipv4-addr--d44d8b95-8734-4bcf-9fba-8ac647fd2e1b"
+    }
+  ]
+}

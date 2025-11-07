@@ -1,0 +1,895 @@
+{
+  "type": "bundle",
+  "id": "bundle--a2499d80-5326-417c-b428-557209c09c98",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.011Z",
+  "modified": "2025-07-30T19:47:13.011Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--4601cb86-44b8-45b7-8703-c4e6d0f8f8bf",
+      "spec_version": "2.1",
+      "created": "2024-05-08T16:46:43.552Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--498859fc-b60d-4ed5-9e87-fead7787b7c1",
+      "start_refs": [
+        "attack-action--31a53687-0695-4e56-84a2-926c1d2d1027"
+      ],
+      "name": "Ivanti Vulnerabilities",
+      "description": "A command injection vulnerability in web components of Ivanti Connect Secure (9.x, 22.x) and Ivanti Policy Secure (9.x, 22.x) allows an authenticated administrator to send specially crafted requests and execute arbitrary commands on the appliance. This flow describes an unnamed organization that is a Volexity customer.",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "Volexity Blog",
+          "description": "Volexit report published Jan 10 2024.",
+          "url": "https://www.volexity.com/blog/2024/01/10/active-exploitation-of-two-zero-day-vulnerabilities-in-ivanti-connect-secure-vpn/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--498859fc-b60d-4ed5-9e87-fead7787b7c1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.011Z",
+      "modified": "2025-07-30T19:47:13.011Z",
+      "name": "Mark Haase",
+      "identity_class": "individual",
+      "contact_information": "mhaase@mitre.org"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--58ea1fef-ef2d-445c-b21f-19d62f745044",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Web Shell",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1505.003",
+      "technique_ref": "attack-pattern--5d0d3609-d06d-49e1-b9c9-b544e0c618cb",
+      "description": "The adversary installs several variants of web shells on multiple servers.",
+      "asset_refs": [
+        "attack-asset--7a2698a2-158b-42f4-b0b5-ef933fae8753",
+        "attack-asset--d6f162c5-382e-4fb1-8eb4-7929208687b5"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--7a2698a2-158b-42f4-b0b5-ef933fae8753",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Internal Web Servers"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--d6f162c5-382e-4fb1-8eb4-7929208687b5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Public-Facing Web Servers"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--4fc888c6-0dc3-4b7d-90f7-071e24e52df1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ivanti Connect Secure",
+      "description": "The Ivanti Connect Secure (ICS) is a VPN appliance."
+    },
+    {
+      "type": "note",
+      "id": "note--9e6c1192-d4f0-4d19-a430-41c6016c2e9d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "abstract": "Pulse Secure",
+      "content": "Ivanti Connect Secure was previously marketed as \"Pulse Connect Secure\" or \"Pulse Secure\".",
+      "object_refs": [
+        "attack-asset--4fc888c6-0dc3-4b7d-90f7-071e24e52df1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f3ecd4a2-a40b-41ee-bb3d-8a47724a10e4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Clear Linux or Mac System Logs",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1070.002",
+      "technique_ref": "attack-pattern--2bce5b30-7014-4a5d-ade7-12913fe6ac36",
+      "description": "The adversary wiped logs on the ICS appliance."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--aed98895-3781-4198-a103-93cebf5cb013",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Impair Defenses",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1562",
+      "technique_ref": "attack-pattern--3d333250-30e4-4a82-9edc-756c68afc529",
+      "description": "The adversary disabled logging on the ICS appliance."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ba3cc611-38e8-468e-8972-1b64f498ce16",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Command and Control",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "description": "The adversary creates reverse tunnels back to their C2 infrastructure."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d0bf7b16-ad73-4594-b531-cc34e53147d1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "CVE-2023-46805",
+      "description": "An authentication bypass vulnerability in the web component of Ivanti ICS 9.x, 22.x and Ivanti Policy Secure allows a remote attacker to access restricted resources by bypassing control checks."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ac9126e8-faeb-42f7-b94a-d19e21554b8f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "CVE-2024-21887",
+      "description": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21887"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--31a53687-0695-4e56-84a2-926c1d2d1027",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploit Public-Facing Application",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1190",
+      "technique_ref": "attack-pattern--3f886f2a-874f-4333-b794-aa6075009b1c",
+      "description": "The adversary uses a chain of two 0-day exploits.",
+      "asset_refs": [
+        "attack-asset--4fc888c6-0dc3-4b7d-90f7-071e24e52df1"
+      ],
+      "effect_refs": [
+        "attack-action--f3ecd4a2-a40b-41ee-bb3d-8a47724a10e4",
+        "attack-action--aed98895-3781-4198-a103-93cebf5cb013",
+        "attack-action--7dd03660-da9b-4ca1-9215-c0b62e19b5ba",
+        "attack-action--ba3cc611-38e8-468e-8972-1b64f498ce16",
+        "attack-action--06fe9325-edc8-4170-9456-dc8e764d0ba0",
+        "attack-action--9215e2af-7d43-44d2-92dc-bffe18cd376d",
+        "attack-action--3b7d1c0f-debf-4f2e-80dd-63967fe9d88f",
+        "attack-action--74055752-a732-4004-a24c-ce2f8c5660dd"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7dd03660-da9b-4ca1-9215-c0b62e19b5ba",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Client Configurations",
+      "tactic_id": "TA0043",
+      "tactic_ref": "x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592",
+      "technique_id": "T1592.004",
+      "technique_ref": "attack-pattern--774ad5bb-2366-4c13-a8a9-65e50b292e7c",
+      "description": "The adversary downloads ICS appliance configuration files."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--06fe9325-edc8-4170-9456-dc8e764d0ba0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Compromise Host Software Binary",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1554",
+      "technique_ref": "attack-pattern--960c3c86-1480-4d72-b4e0-8c242e84a5c5",
+      "description": "The adversary installs a backdoor in a legitimate file that is part of the ICS appliance image. This action requires several steps to remount the filesystem and ultimately hide the implant in compcheckresult.cgi.",
+      "effect_refs": [
+        "attack-action--62ff669d-4064-4c9c-968c-9fa5c50cc0ac"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--a27e71e3-b3dd-4779-a1f7-71cdc3660e9c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "/home/webserver/htdocs/dana-na/auth/compcheckresult.cgi"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9215e2af-7d43-44d2-92dc-bffe18cd376d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Compromise Host Software Binary",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1554",
+      "technique_ref": "attack-pattern--960c3c86-1480-4d72-b4e0-8c242e84a5c5",
+      "description": "The adversary inserts a backdoor into a legitimate JavaScript file used by the SSL VPN login form.",
+      "effect_refs": [
+        "attack-action--33d36b98-79ec-4e83-9fb6-ff6f57ccef7e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--33d36b98-79ec-4e83-9fb6-ff6f57ccef7e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Web Portal Capture",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1056.003",
+      "technique_ref": "attack-pattern--69e5226d-05dc-4f15-95d7-44f5ed78d06e",
+      "description": "The adversary collects plaintext credentials from SSL VPN logins.",
+      "asset_refs": [
+        "attack-asset--a77897fc-8eb8-473a-a760-308349b990f8"
+      ],
+      "effect_refs": [
+        "attack-action--12d166be-c90d-4228-8b93-70ba5426da87",
+        "attack-action--a3954799-6dcf-4d42-a821-b1c19fd8ca74"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--12d166be-c90d-4228-8b93-70ba5426da87",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Desktop Protocol",
+      "tactic_id": "TA0008",
+      "tactic_ref": "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e",
+      "technique_id": "T1021.001",
+      "technique_ref": "attack-pattern--eb062747-2193-45de-8fa2-e62549c37ddf",
+      "description": "The adversary uses stolen credentials to access servers on the internal network over RDP.",
+      "effect_refs": [
+        "attack-action--088f16ed-66d0-4b4f-8702-bae94670f96f",
+        "attack-action--9606315b-47c3-4dd8-8485-6c88c6cf2d50",
+        "attack-action--896b159a-25f0-42a2-acd9-bd1df86da91b"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--a77897fc-8eb8-473a-a760-308349b990f8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Plaintext SSL VPN Credentials",
+      "object_ref": "attack-action--12d166be-c90d-4228-8b93-70ba5426da87"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--af1f9c86-3915-40fa-9e1d-1ec9d8a5da6c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "UTA0178",
+      "description": "An unknown threat actor that Volexity tracks as \"UTA0178\", believed to be a Chinese nation-state actor."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3b7d1c0f-debf-4f2e-80dd-63967fe9d88f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Location Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1614",
+      "technique_ref": "attack-pattern--c877e33f-1df6-40d6-b1e7-ce70f16f4979",
+      "description": "The adversary connects outbound to an IP geolocation service."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e90c36f2-9bbe-4690-8511-1e19bf6d91a8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "value": "ip-api.com"
+    },
+    {
+      "type": "malware",
+      "id": "malware--96cda635-9986-4840-98fc-dd95802b12b6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "GLASSTOKEN",
+      "description": "This previously unknown webshell is called GLASSTOKEN by Volexity. this webshell can create tunnels and execute arbitrary, base-64 encoded Powershell commands.",
+      "is_family": true
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a3954799-6dcf-4d42-a821-b1c19fd8ca74",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Persistence",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "description": "The adversary moves laterally onto a Cyberoam appliance.",
+      "effect_refs": [
+        "attack-action--a5077335-57c2-4bf4-9226-205782a6cb7e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a5077335-57c2-4bf4-9226-205782a6cb7e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Internal Proxy",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1090.001",
+      "technique_ref": "attack-pattern--f6dacc85-b37d-458e-b58d-74fc4bbf5755",
+      "description": "The adversary establishes an SSH tunnel / SOCKS proxy through Cyberoam appliance back to their C2 infrastructure.",
+      "effect_refs": [
+        "attack-action--5e630b44-cd55-4a1b-adde-fa22c88c0b09"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5e630b44-cd55-4a1b-adde-fa22c88c0b09",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Internal Proxy",
+      "tactic_id": "TA0043",
+      "tactic_ref": "x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592",
+      "description": "The adversary performs additional reconnaissance on the internal network through the established proxy."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0eb2e6b7-88a8-4462-a3d9-9c814bbc1ade",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "SSH",
+      "tactic_id": "TA0008",
+      "tactic_ref": "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e",
+      "technique_id": "T1021.004",
+      "technique_ref": "attack-pattern--2db31dcd-54da-405d-acef-b9129b816ed6",
+      "description": "The adversary uses stolen credentials to access servers on the internal network over SSH.",
+      "effect_refs": [
+        "attack-operator--71962d5a-71e1-4a6a-a7b5-0a6a68832c7f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7e2ad047-22c2-4462-9988-dc10e83bebf0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "SMB/Windows Admin Shares",
+      "tactic_id": "TA0008",
+      "tactic_ref": "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e",
+      "technique_id": "T1021.002",
+      "technique_ref": "attack-pattern--4f9ca633-15c5-463c-9724-bdcd54fde541",
+      "description": "The adversary uses stolen credentials to access servers on the internal network over SMB."
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--71962d5a-71e1-4a6a-a7b5-0a6a68832c7f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--58ea1fef-ef2d-445c-b21f-19d62f745044"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ac1b8a5b-d279-4d97-aa6f-d110942f7178",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "/home/perl/DSLogConfig.pm"
+    },
+    {
+      "type": "file",
+      "id": "file--227fcc9e-6596-405d-8257-c5e7c6a5e92f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "/home/etc/sql/dsserver/sessionserver.pl"
+    },
+    {
+      "type": "file",
+      "id": "file--6b956cbd-6875-441a-8848-9646c5eceb8d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "/home/etc/sql/dsserver/sessionserver.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--b562d2ae-3ae5-46f0-8941-05b326a4be40",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "/home/webserver/htdocs/dana-na/auth/lastauthserverused.js"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--62ff669d-4064-4c9c-968c-9fa5c50cc0ac",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "description": "Creates fake entries in Ivanti's \"Integrity Checker Tool\" to avoid detection of the modified files."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--896b159a-25f0-42a2-acd9-bd1df86da91b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "LSASS Memory",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1003.001",
+      "technique_ref": "attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+      "description": "The adversary dumps LSASS memory to obtain additional domain credentials and uses those for further lateral movement over RDP.",
+      "asset_refs": [
+        "attack-asset--e972a0d3-e05d-46cc-bb86-7feb6e6e5128"
+      ],
+      "effect_refs": [
+        "attack-action--12d166be-c90d-4228-8b93-70ba5426da87"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--e972a0d3-e05d-46cc-bb86-7feb6e6e5128",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Domain User Accounts",
+      "object_ref": "attack-action--12d166be-c90d-4228-8b93-70ba5426da87"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9606315b-47c3-4dd8-8485-6c88c6cf2d50",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Reconnaissance",
+      "tactic_id": "TA0043",
+      "tactic_ref": "x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592",
+      "description": "The adversary obtained a backup of a virtual hard disk from a domain controller.",
+      "effect_refs": [
+        "attack-action--55140b59-4167-4410-9269-12be8042d591"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--55140b59-4167-4410-9269-12be8042d591",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "NTDS",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1003.003",
+      "technique_ref": "attack-pattern--edf91964-b26e-4b4a-9600-ccacd7d7df24",
+      "description": "The adversary extracts NTDS.DIT from the hard disk image.",
+      "effect_refs": [
+        "attack-action--9bd0a0d1-d4fe-47b5-931b-3158c7878bff"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9bd0a0d1-d4fe-47b5-931b-3158c7878bff",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Archive via Utility",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "technique_id": "T1560.001",
+      "technique_ref": "attack-pattern--00f90846-cbd1-4fc5-9233-df5c2bf2a662",
+      "description": "The adversary compresses the NTDS.DIT file."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--088f16ed-66d0-4b4f-8702-bae94670f96f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Credentials in Registry",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1552.002",
+      "technique_ref": "attack-pattern--341e222a-a6e3-4f6f-b69c-831d792b1580",
+      "description": "The adversary accessed credentials used by a backup system called Veeam."
+    },
+    {
+      "type": "note",
+      "id": "note--9c756e14-fe53-41ee-98fa-56818eb4edaa",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "abstract": "Veeam Credential Extraction",
+      "content": "The script that extracts Veeam credentials is available on GitHub: https://github.com/sadshade/veeam-creds",
+      "object_refs": [
+        "attack-action--088f16ed-66d0-4b4f-8702-bae94670f96f"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--fd7da900-c805-4e70-a70a-b7ef2b597b43",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "abstract": "GLASSTOKEN Source Code",
+      "content": "Volexity posted the GLASSTOKEN source code on its GitHub: https://github.com/volexity/threat-intel/blob/main/2024/2024-01-10%20Ivanti%20Connect%20Secure/attachments/glasstoken_v1.aspx",
+      "object_refs": [
+        "malware--96cda635-9986-4840-98fc-dd95802b12b6"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--74055752-a732-4004-a24c-ce2f8c5660dd",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Compromise Host Software Binary",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1554",
+      "technique_ref": "attack-pattern--960c3c86-1480-4d72-b4e0-8c242e84a5c5",
+      "description": "The adversary inserts a backdoor into a legitimate Python file called visits.py."
+    },
+    {
+      "type": "file",
+      "id": "file--03abaec9-b769-4b2f-a64e-a3bb835b673c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "visits.py"
+    },
+    {
+      "type": "malware",
+      "id": "malware--39993266-30bf-44c1-8b34-18db782fa8ae",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "name": "GIFTEDVISITOR",
+      "description": "This webshell is inserted into the legitimate file visits.py. Webshell commands and responses are encrypted with AES.",
+      "is_family": true
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d02663c4-8d1b-4e10-986e-be53d3972139",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "vulnerability--d0bf7b16-ad73-4594-b531-cc34e53147d1",
+      "target_ref": "attack-action--31a53687-0695-4e56-84a2-926c1d2d1027"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f3da20e5-ef1d-42f4-a4d4-cd39f86cf35a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "vulnerability--ac9126e8-faeb-42f7-b94a-d19e21554b8f",
+      "target_ref": "attack-action--31a53687-0695-4e56-84a2-926c1d2d1027"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8fa95833-fcb4-4eb5-b86d-ce3ebbe83763",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--06fe9325-edc8-4170-9456-dc8e764d0ba0",
+      "target_ref": "file--a27e71e3-b3dd-4779-a1f7-71cdc3660e9c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--971e3cd8-79c3-4f14-a73a-57a04a162c97",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--06fe9325-edc8-4170-9456-dc8e764d0ba0",
+      "target_ref": "file--ac1b8a5b-d279-4d97-aa6f-d110942f7178"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d6ed6e1-30a3-47bd-ad7a-8de2f0de7b1b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--06fe9325-edc8-4170-9456-dc8e764d0ba0",
+      "target_ref": "file--227fcc9e-6596-405d-8257-c5e7c6a5e92f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eaf5de5d-c24e-4294-8e60-dd8c9338561a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--06fe9325-edc8-4170-9456-dc8e764d0ba0",
+      "target_ref": "file--6b956cbd-6875-441a-8848-9646c5eceb8d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5b3c675-ee57-49fe-b304-b8396dc6a604",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--9215e2af-7d43-44d2-92dc-bffe18cd376d",
+      "target_ref": "file--b562d2ae-3ae5-46f0-8941-05b326a4be40"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86378d0e-f5a3-4bf6-b918-a80abab09711",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-asset--a77897fc-8eb8-473a-a760-308349b990f8",
+      "target_ref": "attack-action--0eb2e6b7-88a8-4462-a3d9-9c814bbc1ade"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a211a6e-653c-4b8b-bd72-68e365e146b5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-asset--a77897fc-8eb8-473a-a760-308349b990f8",
+      "target_ref": "attack-action--7e2ad047-22c2-4462-9988-dc10e83bebf0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da315a62-0dde-4331-b3e2-59241fb2b896",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--3b7d1c0f-debf-4f2e-80dd-63967fe9d88f",
+      "target_ref": "domain-name--e90c36f2-9bbe-4690-8511-1e19bf6d91a8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ad769b8-a701-46a8-ac54-e1a4763d3adc",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--96cda635-9986-4840-98fc-dd95802b12b6",
+      "target_ref": "attack-action--58ea1fef-ef2d-445c-b21f-19d62f745044"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c34d4b5f-bb92-4ff1-972f-3c74715d58ed",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--74055752-a732-4004-a24c-ce2f8c5660dd",
+      "target_ref": "file--03abaec9-b769-4b2f-a64e-a3bb835b673c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--69be6f3d-32d0-4c8d-8d9a-56ec330616b6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.012Z",
+      "modified": "2025-07-30T19:47:13.012Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--39993266-30bf-44c1-8b34-18db782fa8ae",
+      "target_ref": "attack-action--74055752-a732-4004-a24c-ce2f8c5660dd"
+    }
+  ]
+}

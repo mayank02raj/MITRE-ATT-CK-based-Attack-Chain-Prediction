@@ -1,0 +1,992 @@
+{
+  "type": "bundle",
+  "id": "bundle--3f3f6bab-a7ef-49f7-aeb8-d04682252fd1",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.511Z",
+  "modified": "2025-07-30T19:47:13.511Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--34c68acb-2ef6-4c91-b981-10416704b547",
+      "spec_version": "2.1",
+      "created": "2022-10-27T02:44:54.520Z",
+      "modified": "2025-07-30T19:47:13.511Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--dfb5af72-04d3-43a4-82f2-a1a67a3275d4",
+      "start_refs": [
+        "attack-action--b28935d3-2248-4304-93c7-f3c73afd7351"
+      ],
+      "name": "WhisperGate",
+      "description": "A Russian state-sponsored malware campaign targeting Ukraine.",
+      "scope": "campaign",
+      "external_references": [
+        {
+          "source_name": "Talos ",
+          "description": "Article",
+          "url": "https://blog.talosintelligence.com/ukraine-campaign-delivers-defacement/"
+        },
+        {
+          "source_name": "Microsoft",
+          "description": "Article",
+          "url": "https://www.microsoft.com/en-us/security/blog/2022/01/15/destructive-malware-targeting-ukrainian-organizations/"
+        },
+        {
+          "source_name": "Recorded Future",
+          "description": "Article",
+          "url": "https://www.recordedfuture.com/whispergate-malware-corrupts-computers-ukraine"
+        },
+        {
+          "source_name": "Blackberry",
+          "description": "Article",
+          "url": "https://blogs.blackberry.com/en/2022/01/threat-thursday-whispergate-wiper"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--dfb5af72-04d3-43a4-82f2-a1a67a3275d4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.511Z",
+      "modified": "2025-07-30T19:47:13.511Z",
+      "name": "Mia Sanchez",
+      "contact_information": "msanchez@mitre.org"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b28935d3-2248-4304-93c7-f3c73afd7351",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.511Z",
+      "modified": "2025-07-30T19:47:13.511Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1078",
+      "technique_ref": "attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81",
+      "description": "Attackers gained initial access through stolen credentials and likely had access to the victim's network for months",
+      "effect_refs": [
+        "attack-action--c89289c0-e397-4de8-bc10-9bb36817433a"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--723f2959-ff51-4684-8adb-1a8d039237da",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.511Z",
+      "modified": "2025-07-30T19:47:13.511Z",
+      "name": "DEV-0586",
+      "description": "not attributed to any existing threat actor; this is the designation until the threat actor is converted to a an actor name or merged with a known threat actor",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "first_seen": "2021-06-01T04:00:00.000Z",
+      "roles": [
+        "director"
+      ],
+      "sophistication": "expert",
+      "resource_level": "organization; possibly government",
+      "primary_motivation": "ideology"
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--9aee0182-e45b-4936-92a0-ab6bf4fb21d7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.511Z",
+      "modified": "2025-07-30T19:47:13.511Z",
+      "name": "Ukraine WhisperGate",
+      "description": "part of over-arching disinformation campaign in Ukraine. which targets organizations across multiple industries in Ukraine; intended to destroy the MBR and inflict additional damage",
+      "first_seen": "2022-01-01T05:00:00.000Z"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c89289c0-e397-4de8-bc10-9bb36817433a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.511Z",
+      "modified": "2025-07-30T19:47:13.511Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "The malware is written to the C: drive in various directories and executes via Impacket",
+      "effect_refs": [
+        "attack-condition--d4067e78-456d-468f-a73b-87fe2fa5c179"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--bd603392-08d5-4112-b6e6-454271bbe97a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "Impacket",
+      "description": "Python tool to perform lateral movement and execute the malware",
+      "tool_types": [
+        "exploitation"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3fb61bf8-98d3-474f-9ffb-db073ac92b5e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Bootkit",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1542.003",
+      "technique_ref": "attack-pattern--1b7b1806-7746-41a1-a35d-e48dae25ddba",
+      "description": "Executable wipes the MBR and replaces it with the ransom note",
+      "effect_refs": [
+        "attack-condition--23c341a8-1281-424d-9e62-07a7cd91f16f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--bafd6a81-968b-4436-890a-a08b3ba0e825",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "The malware executes a base64-encoded PowerShell command twice to make the machine sleep for 20 seconds",
+      "effect_refs": [
+        "attack-condition--68aae979-4c68-4cf9-a673-1f432e10450e"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--d4067e78-456d-468f-a73b-87fe2fa5c179",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Malware executes when the infected device is rebooted by the user"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--68aae979-4c68-4cf9-a673-1f432e10450e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Machine sleeps for 20 seconds"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0a685dd5-0838-4883-8c08-52ae92e1bb27",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "The malware retrieves a file from a Discord channel.",
+      "effect_refs": [
+        "attack-condition--885fa2f0-8387-48d4-a774-81ad544d1b9e"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--f36c1562-80be-4df6-a9e7-753c6794832f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "162.159.135.233",
+      "description": "Discord server hosting the next stage of the attack",
+      "infrastructure_types": [
+        "hosting-malware"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--23c341a8-1281-424d-9e62-07a7cd91f16f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Second stage of the attack starts"
+    },
+    {
+      "type": "tool",
+      "id": "tool--a6a55cd9-1302-478a-9eb0-8ee475906c71",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "Tbopbh.jpg",
+      "description": "in reverse byte order; a malicious file corrupter",
+      "tool_types": [
+        "unknown"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--885fa2f0-8387-48d4-a774-81ad544d1b9e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Malware reverses the bytes within the jpg file"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e37c269c-2993-49b2-847f-b2b2a2ae973d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Steganography",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1027.003",
+      "technique_ref": "attack-pattern--c2e147a9-d1a8-4074-811a-d8789202d916",
+      "description": "JPG file is loaded as a .NET assembly file; when restored, it is a Win32 DLL",
+      "effect_refs": [
+        "attack-condition--525e2bf0-6244-42dd-b64c-4a62e06a5eab"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--aa432949-7c30-48da-8028-38687985a8eb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Deobfuscate/Decode Files or Information",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1140",
+      "technique_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+      "description": "A resource from the DLL is loaded into memory and decoded by a XOR operation",
+      "asset_refs": [
+        "attack-asset--7a073913-c3ec-46d4-ae42-cfc926d99824"
+      ],
+      "effect_refs": [
+        "attack-action--832777c4-7164-4da2-a8c6-4f0c8afab9ce"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--7a073913-c3ec-46d4-ae42-cfc926d99824",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "78c855a088924e92a7f60d661c3d1845",
+      "description": "resource loaded into memory"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--832777c4-7164-4da2-a8c6-4f0c8afab9ce",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Embedded Payloads",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1027.009",
+      "technique_ref": "attack-pattern--0533ab23-3f7d-463f-9bd8-634d27e4dee1",
+      "description": "Decoded resource is another .NET DLL containing 2 additional resources",
+      "asset_refs": [
+        "attack-asset--46148584-a5bb-4ed7-9222-cb642b02d13b",
+        "attack-asset--df39e4ae-a6db-456f-a766-634d4d6c5321"
+      ],
+      "effect_refs": [
+        "attack-action--490d6448-7f30-42f8-8269-8070af8c8923"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--46148584-a5bb-4ed7-9222-cb642b02d13b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "zx_fee6cce9db1d42510801fc1ed0e09452.dll",
+      "description": ".NET dll file"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--df39e4ae-a6db-456f-a766-634d4d6c5321",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "2 additional resources",
+      "description": "AdvancedRun & Waqybg"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--490d6448-7f30-42f8-8269-8070af8c8923",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "AdvancedRun uses PowerShell to execute multiple commands to stop Windows Defender from running and to delete its files and directories from memory",
+      "effect_refs": [
+        "attack-action--694efa68-7cff-4b29-ac5b-2500dd3a7fa9"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2d74bde7-a217-4a95-88c8-5c57a42c0bd8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data Destruction",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1485",
+      "technique_ref": "attack-pattern--d45a3d09-b3cf-48f4-9f0f-f521ee5cb05c",
+      "description": "For each enumeration, the malware wipes the files in the logical drive with specific file extensions, while ignoring files in the %HOMEDRIVE%/Windows directory.",
+      "asset_refs": [
+        "attack-asset--f4157413-58dc-4ef7-bbdd-6b209673ddbf"
+      ],
+      "effect_refs": [
+        "attack-action--4e521454-aecf-4dd1-8180-a4b0947dbb8f"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--f4157413-58dc-4ef7-bbdd-6b209673ddbf",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Targeted File Extensions",
+      "description": ".HTML .HTM .PHTML .PHP .JSP .ASP .PHPS .PHP5 .ASPX .PHP4 .PHP3 .DOC .DOCX .XLS .XLSX .PPT .PPTX .PST .MSG .EML .TXT .CSV .RTF .WKS .WK1 .PDF .DWG .JPEG .JPG .DOCM .DOT .DOTM .XLSM .XLSB .XLW .XLT .XLM .XLC .XLTX .XLTM .PPTM .POT .PPS .PPSM .PPSX .HWP .SXI .STI .SLDX .SLDM .BMP .PNG .GIF .RAW .TIF .TIFF .PSD .SVG .CLASS .JAR .SCH .VBS .BAT .CMD .ASM .PAS .CPP .SXM .STD .SXD .ODP .WB2 .SLK .DIF .STC .SXC .ODS .3DM .MAX .3DS .STW .SXW .ODT .PEM .P12 .CSR .CRT .KEY .PFX .DER .OGG .JAVA .INC .INI .PPK .LOG .VDI .VMDK .VHD .MDF .MYI .MYD .FRM .SAV .ODB .DBF .MDB .ACCDB .SQL .SQLITEDB .SQLITE3 .LDF .ARC .BAK .TAR .TGZ .RAR .ZIP .BACKUP .ISO .CONFIG"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4e521454-aecf-4dd1-8180-a4b0947dbb8f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File Deletion",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1070.004",
+      "technique_ref": "attack-pattern--d63a3fb8-9452-4e9d-a60a-54be68d5998c",
+      "description": "WhisperGate deletes InstallerUtil.exe\" from the %TEMP% directory.",
+      "effect_refs": [
+        "attack-action--6fde518b-a422-4e01-bd91-17b9ce07e884"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--daa0a62b-cc76-4709-b9c4-3f7454d02c5f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obfuscated Files or Information",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1027",
+      "technique_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+      "description": "WhisperGate uses Eazfuscator to obfuscate the .NET malware",
+      "effect_refs": [
+        "attack-action--217e84c6-e343-4d62-8c4e-f55dace6c913"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--525e2bf0-6244-42dd-b64c-4a62e06a5eab",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "DLL retrieves all public methods searching for \"Ylfwdwgmpilzyaph\"; if method is found, it is executed by calling  \".Invoke(null, null)\""
+    },
+    {
+      "type": "tool",
+      "id": "tool--d06890f7-9f09-46e6-8e7d-77254aa11703",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "Eazfuscator",
+      "tool_types": [
+        "unknown"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--217e84c6-e343-4d62-8c4e-f55dace6c913",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Visual Basic",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.005",
+      "technique_ref": "attack-pattern--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+      "description": "The DLL drops a VBScript into the %Temp% directory and executes it.",
+      "effect_refs": [
+        "attack-action--14e8a54a-8f87-4e65-b227-3df091053118"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--2df6c6d3-ee7b-47a4-ac7a-c6bce2a238b2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "AdvancedRun.exe",
+      "description": "tool from Nirsoft to execute a program with different settings; can be used to execute commands in the context of the TrustedInstaller user",
+      "tool_types": [
+        "exploitation"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--694efa68-7cff-4b29-ac5b-2500dd3a7fa9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Dynamic-link Library Injection",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1055.001",
+      "technique_ref": "attack-pattern--f4599aa0-4f85-4a32-80ea-fc39dc965945",
+      "description": "Waqybg resource is loaded into memory and restores it as the wiper payload. The DLL then injects the payload into legitimate Windows utility InstallUtil.exe",
+      "effect_refs": [
+        "attack-action--256a646b-d1f6-4f11-86a7-86fbff6fba36"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--6d6604d7-4c4e-4eb7-8182-4d74dc3811c9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "InstallUtil.exe",
+      "description": "benign program produced by Microsoft and distributed as part of the .NET framework",
+      "tool_types": [
+        "unknown"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--256a646b-d1f6-4f11-86a7-86fbff6fba36",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "InstallUtil",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1218.004",
+      "technique_ref": "attack-pattern--2cd950a6-16c4-404a-aa01-044322395107",
+      "description": "The malware executes Waqybg through the legitimate program InstallUtil",
+      "effect_refs": [
+        "attack-action--b1d2c424-5d2e-4693-a3cc-de5047e8819f",
+        "attack-action--2a5161c3-d3a5-454a-beac-0ad43eacc7a1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b1d2c424-5d2e-4693-a3cc-de5047e8819f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Information Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1082",
+      "technique_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+      "description": "The wiper looks for fixed logical drives in the system",
+      "effect_refs": [
+        "attack-operator--8c5ccd09-de7d-433d-af00-effa50e50932"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2a5161c3-d3a5-454a-beac-0ad43eacc7a1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Network Connections Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1049",
+      "technique_ref": "attack-pattern--7e150503-88e7-4861-866b-ff1ac82c4475",
+      "description": "The wiper looks for remote logical drives in the system",
+      "effect_refs": [
+        "attack-operator--8c5ccd09-de7d-433d-af00-effa50e50932"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--8c5ccd09-de7d-433d-af00-effa50e50932",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--2d74bde7-a217-4a95-88c8-5c57a42c0bd8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6fde518b-a422-4e01-bd91-17b9ce07e884",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Shutdown/Reboot",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1529",
+      "technique_ref": "attack-pattern--ff73aa03-0090-4464-83ac-f89e233c02bc",
+      "description": "WhisperGate attempts to stop all running processes (including itself) by calling ExitWindowsEx API"
+    },
+    {
+      "type": "note",
+      "id": "note--21ccadc0-874d-4e01-b9d8-95ec340f8db1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "abstract": "Evidence",
+      "content": "Evidence of suspicious activity using legitimate accounts, such as creating a user, adding new user to privileged group, and downloading file with a deface image.",
+      "object_refs": [
+        "attack-action--b28935d3-2248-4304-93c7-f3c73afd7351"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--67537ec0-a0c5-4372-a89b-15473deaec2e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "stage1.exe",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": false,
+      "capabilities": [
+        "compromises-data-availability"
+      ]
+    },
+    {
+      "type": "directory",
+      "id": "directory--61b6a8e8-acb8-4894-8d3d-36111c0e663a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "path": "C:\\PerfLogs, C:\\ProgramData, C:\\, and C:\\temp"
+    },
+    {
+      "type": "malware",
+      "id": "malware--dca4e5f0-804e-4694-845d-9c3dd2a35d1a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "stage2.exe",
+      "description": "NET downloader for malicious file corrupter malware",
+      "malware_types": [
+        "downloader"
+      ],
+      "is_family": false,
+      "capabilities": [
+        "installs-other-components"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--a557fe6f-405d-4684-9ead-d1c11dc32f45",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "Frkmlkdkdubkznbkmcf.dll",
+      "description": "Wind32 DLL file containing 3 resources",
+      "malware_types": [
+        "trojan"
+      ],
+      "is_family": false
+    },
+    {
+      "type": "malware",
+      "id": "malware--db68d0fb-9669-4681-bc41-0d8d0cab5470",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "name": "Nmddfrqqrbyjeygggda.vbs",
+      "malware_types": [
+        "trojan"
+      ],
+      "is_family": false,
+      "implementation_languages": [
+        "visual-basic"
+      ],
+      "capabilities": [
+        "evades-av"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--14e8a54a-8f87-4e65-b227-3df091053118",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Disable or Modify Tools",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1562.001",
+      "technique_ref": "attack-pattern--ac08589e-ee59-4935-8667-d845e38fe579",
+      "description": "The script modifies Windows Defender settings to exclude the C: from being scanned",
+      "effect_refs": [
+        "attack-action--aa432949-7c30-48da-8028-38687985a8eb"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e74eee6-1086-4be9-aae9-deee0d8ca484",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--9aee0182-e45b-4936-92a0-ab6bf4fb21d7",
+      "target_ref": "threat-actor--723f2959-ff51-4684-8adb-1a8d039237da"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cac322e-0348-4f01-a3aa-3b8d8ffb4fb0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--c89289c0-e397-4de8-bc10-9bb36817433a",
+      "target_ref": "directory--61b6a8e8-acb8-4894-8d3d-36111c0e663a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--297609ae-a889-4a2c-bf30-11b9c0b27649",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--c89289c0-e397-4de8-bc10-9bb36817433a",
+      "target_ref": "malware--67537ec0-a0c5-4372-a89b-15473deaec2e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7dfb011d-5648-497a-9cfe-3834f0153a64",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--c89289c0-e397-4de8-bc10-9bb36817433a",
+      "target_ref": "tool--bd603392-08d5-4112-b6e6-454271bbe97a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa488fec-3eee-40a8-a474-900812377705",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--bafd6a81-968b-4436-890a-a08b3ba0e825",
+      "target_ref": "malware--dca4e5f0-804e-4694-845d-9c3dd2a35d1a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c20f763-8738-42a8-b229-8b654eb67469",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--d4067e78-456d-468f-a73b-87fe2fa5c179",
+      "target_ref": "attack-action--3fb61bf8-98d3-474f-9ffb-db073ac92b5e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e055131-75bd-4980-8448-cec772b74150",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--68aae979-4c68-4cf9-a673-1f432e10450e",
+      "target_ref": "attack-action--0a685dd5-0838-4883-8c08-52ae92e1bb27"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fcb78a63-be6d-48c6-ab98-0d91aeb71def",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--0a685dd5-0838-4883-8c08-52ae92e1bb27",
+      "target_ref": "infrastructure--f36c1562-80be-4df6-a9e7-753c6794832f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--487dba92-0402-43b2-b6c2-19476c11ee86",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--0a685dd5-0838-4883-8c08-52ae92e1bb27",
+      "target_ref": "tool--a6a55cd9-1302-478a-9eb0-8ee475906c71"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52bfa853-06a9-4f46-9e0f-3005653abca8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--23c341a8-1281-424d-9e62-07a7cd91f16f",
+      "target_ref": "attack-action--bafd6a81-968b-4436-890a-a08b3ba0e825"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a6566f3-0a2c-47d2-9776-35f7a6a57d24",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--885fa2f0-8387-48d4-a774-81ad544d1b9e",
+      "target_ref": "attack-action--e37c269c-2993-49b2-847f-b2b2a2ae973d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8501cbf-a88e-4122-b6c9-217bf780ac7d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--e37c269c-2993-49b2-847f-b2b2a2ae973d",
+      "target_ref": "malware--a557fe6f-405d-4684-9ead-d1c11dc32f45"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a102349-ea89-41ce-8901-b80fc6fdcf0b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--490d6448-7f30-42f8-8269-8070af8c8923",
+      "target_ref": "tool--2df6c6d3-ee7b-47a4-ac7a-c6bce2a238b2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c50ee846-13af-45d6-b86a-967e76e9242d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--daa0a62b-cc76-4709-b9c4-3f7454d02c5f",
+      "target_ref": "tool--d06890f7-9f09-46e6-8e7d-77254aa11703"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae50c087-3397-4509-a985-8ac286f68319",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--525e2bf0-6244-42dd-b64c-4a62e06a5eab",
+      "target_ref": "attack-action--daa0a62b-cc76-4709-b9c4-3f7454d02c5f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ac26f34-cfb7-406e-aafc-618d81c787e2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--217e84c6-e343-4d62-8c4e-f55dace6c913",
+      "target_ref": "malware--db68d0fb-9669-4681-bc41-0d8d0cab5470"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df0ca177-c044-4ed2-954b-1bcd20ca1a4b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.512Z",
+      "modified": "2025-07-30T19:47:13.512Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--694efa68-7cff-4b29-ac5b-2500dd3a7fa9",
+      "target_ref": "tool--6d6604d7-4c4e-4eb7-8182-4d74dc3811c9"
+    }
+  ]
+}

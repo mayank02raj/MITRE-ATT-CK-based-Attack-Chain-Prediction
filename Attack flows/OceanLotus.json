@@ -1,0 +1,840 @@
+{
+  "type": "bundle",
+  "id": "bundle--14153d61-0872-47f7-a04b-bc8d798502c9",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.161Z",
+  "modified": "2025-07-30T19:47:13.161Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--c2d92d72-6b78-4663-9f91-2cb0ae451a71",
+      "spec_version": "2.1",
+      "created": "2023-10-13T20:05:55.368Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--dbaedd12-79ed-4396-bada-0db160274d10",
+      "start_refs": [
+        "attack-action--8196f7e1-3d8b-42ed-bede-b81bfd38f864",
+        "attack-condition--4d72adde-a31f-484b-96fc-ddb09c1dd26b"
+      ],
+      "name": "OceanLotus",
+      "description": "OceanLotus Operations Flow ",
+      "scope": "incident",
+      "external_references": [
+        {
+          "source_name": "OceanLotus Operations Fl",
+          "url": "https://github.com/center-for-threat-informed-defense/ocean-lotus/blob/main/Operations_Flow/Operations_Flow.md"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--dbaedd12-79ed-4396-bada-0db160274d10",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "name": "Maggie MacAlpine",
+      "identity_class": "individual"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8196f7e1-3d8b-42ed-bede-b81bfd38f864",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Spearphishing Attachment",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1566.001",
+      "technique_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+      "description": "OceanLotus uses a targeted phishing attack with an attachment.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-condition--53ab2436-71dc-4575-812e-6fad6a22fcb4"
+      ],
+      "asset_refs": [
+        "attack-asset--38a1ff89-992e-4c43-894b-a204ca2be5ee"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2ea61897-a90d-4cae-b835-facc2885cf12",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Spearphishing Attachment",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1566.001",
+      "technique_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+      "description": "Hope Potter downloads a macOS application disguised Word document.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--91aa2f3d-f804-484b-9aee-14fec5c90baf"
+      ],
+      "asset_refs": [
+        "attack-asset--38a1ff89-992e-4c43-894b-a204ca2be5ee"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--32ecc8a5-bed1-40ca-a33f-9e0be0efa4fb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Embedded Payloads",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1027.009",
+      "technique_ref": "attack-pattern--0533ab23-3f7d-463f-9bd8-634d27e4dee1",
+      "description": "The second stage of the payload detonates and deploys a decoy Word document, and connects to the C2 server.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--fd60cf7d-cf9a-45f8-8335-62ddf1eac56d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fd60cf7d-cf9a-45f8-8335-62ddf1eac56d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Launch Agent",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1543.001",
+      "technique_ref": "attack-pattern--d10cbd34-42e3-45c0-84d2-535a09849584",
+      "description": "Using the script, OceanLotus also installs persistence via Launch Agent",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--4a2525ee-6951-4faa-9091-f88387c18b3e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--88d99557-c2f4-4cbf-9ecc-7aa81d51c40d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Information Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1082",
+      "technique_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+      "description": "OceanLotus conducts local system discovery on the macOS host.",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--96631858-d587-44a0-8a6d-fb28b5fc59fa"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--96631858-d587-44a0-8a6d-fb28b5fc59fa",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over C2 Channel",
+      "tactic_id": "TA0010",
+      "tactic_ref": "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462",
+      "technique_id": "T1041",
+      "technique_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+      "description": "OceanLotus reviews the contents of the .ssh folder. Seeing there is an SSH key, the known_hosts and history files are exfiled to the C2 server for analysis.",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--f4069dc6-a40c-4e38-8134-e70b960d2edd"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f4069dc6-a40c-4e38-8134-e70b960d2edd",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote System Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1018",
+      "technique_ref": "attack-pattern--e358d692-23c0-4a31-9eb6-ecc13a8d7735",
+      "description": "The history file reveals Hope Potter sends files to the file server using SCP",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--61c13fc8-0842-4d89-9954-3be92a917cd5"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--61c13fc8-0842-4d89-9954-3be92a917cd5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "OceanLotus downloads Rota Jakiro to the macOS host in the /Users/hpotter/Library/WebKit folder (the execution folder for OSX.OceanLotus) as osx.download",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--84b5c4df-ac03-48da-a3f8-e2202d3dbe36"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--84b5c4df-ac03-48da-a3f8-e2202d3dbe36",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Services",
+      "tactic_id": "TA0008",
+      "tactic_ref": "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e",
+      "technique_id": "T1021",
+      "technique_ref": "attack-pattern--54a649ff-439a-41a4-9856-8d144a2551ba",
+      "description": "OSX.OceanLotus then uses SCP to transfer Rota Jakiro to the \\tmp folder of the Linux host",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--8765d47d-ce2d-4a0a-92de-a646eb8e7ab5"
+      ],
+      "asset_refs": [
+        "attack-asset--cab0c047-8737-4f55-8303-4f3ea4427cc2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8765d47d-ce2d-4a0a-92de-a646eb8e7ab5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "SSH",
+      "tactic_id": "TA0008",
+      "tactic_ref": "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e",
+      "technique_id": "T1021.004",
+      "technique_ref": "attack-pattern--2db31dcd-54da-405d-acef-b9129b816ed6",
+      "description": "Using SSH, OSX.OceanLotus changes Rota Jakiro to an executable",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--427e660b-489c-4b2f-9a26-53bb1bc1d552"
+      ],
+      "asset_refs": [
+        "attack-asset--cab0c047-8737-4f55-8303-4f3ea4427cc2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--427e660b-489c-4b2f-9a26-53bb1bc1d552",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Unix Shell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.004",
+      "technique_ref": "attack-pattern--a9d4b653-6915-42af-98b2-5758c4ceee56",
+      "description": "OceanLotus executes Rota Jakiro on the Linux host",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--9facbe22-eb51-4968-a775-93d5c71a0141",
+        "attack-action--777acef5-9f4d-4ff6-b50d-5eeafd21f2ab"
+      ],
+      "asset_refs": [
+        "attack-asset--cab0c047-8737-4f55-8303-4f3ea4427cc2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a939030b-f74f-45b7-bb62-123fde280a5b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File and Directory Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1083",
+      "technique_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+      "description": "2. Starting from the $HOME folder using the find command, copy files with a .pdf extension into the tmp.rota folder",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--e04845fa-6f37-42bf-8479-2e9cc4a4923b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9facbe22-eb51-4968-a775-93d5c71a0141",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Information Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1082",
+      "technique_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+      "description": "For initial collection, Rota Jakiro executes and collects the results from the uname syscall.",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-operator--217b966f-2444-4321-867c-489ac0c7ed44"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e04845fa-6f37-42bf-8479-2e9cc4a4923b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Local Data Staging",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "technique_id": "T1074.001",
+      "technique_ref": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--7fef99a8-a29a-4e34-8b46-013392f28ab8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--777acef5-9f4d-4ff6-b50d-5eeafd21f2ab",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Share Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1135",
+      "technique_ref": "attack-pattern--3489cfc5-640f-4bb3-a103-9137b97de79f",
+      "description": "Rota Jakiro sends the following information regarding the Linux host to the C2 server: Host name, Architecture, & Kernel version. Rota Jakiro then downloads and executes a shared object (mount.so file) performing discovery for mounted drives connected to the Linux host.",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-operator--217b966f-2444-4321-867c-489ac0c7ed44"
+      ],
+      "asset_refs": [
+        "attack-asset--cab0c047-8737-4f55-8303-4f3ea4427cc2"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5e7dfe2e-ff0d-4a0f-80c3-3420647ae6ff",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over C2 Channel",
+      "tactic_id": "TA0010",
+      "tactic_ref": "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462",
+      "technique_id": "T1041",
+      "technique_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+      "description": "The resulting information is saved to the mount.txt file. Rota Jakiro then uploads this file to the C2 server for offline analysis",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--3a38eb18-4404-4df0-b4a2-242431de8966"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3a38eb18-4404-4df0-b4a2-242431de8966",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Automated Collection",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "technique_id": "T1119",
+      "technique_ref": "attack-pattern--30208d3e-0d6b-43c8-883e-44462a514619",
+      "description": "OceanLotus downloads and executes a shared object on the Linux host (pdf.so). The shared object performs the following actions:",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--c43aadb1-b567-4884-a05e-eec887f314a4",
+        "attack-action--0232d3f7-1627-4645-86dd-f121aa9309b9"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0232d3f7-1627-4645-86dd-f121aa9309b9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Hidden Files and Directories",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1564.001",
+      "technique_ref": "attack-pattern--ec8fc7e2-b356-455c-8db5-2e37be158e7d",
+      "description": "1. Creates a hidden directory named tmp.rota folder",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--a939030b-f74f-45b7-bb62-123fde280a5b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7fef99a8-a29a-4e34-8b46-013392f28ab8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over C2 Channel",
+      "tactic_id": "TA0010",
+      "tactic_ref": "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462",
+      "technique_id": "T1041",
+      "technique_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+      "description": "OceanLotus tasks Rota Jakiro to upload the /tmp/rota.tar.gz file to the C2 server completeing the objective.",
+      "confidence": 100
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c43aadb1-b567-4884-a05e-eec887f314a4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Archive via Utility",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "technique_id": "T1560.001",
+      "technique_ref": "attack-pattern--00f90846-cbd1-4fc5-9233-df5c2bf2a662",
+      "description": "All files are then compressed into a single file named rota.tar.gz",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--7fef99a8-a29a-4e34-8b46-013392f28ab8"
+      ]
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--3020cde2-1b95-4725-bd4e-4f46e38f06e8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "display_name": "Hope Potter"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--53ab2436-71dc-4575-812e-6fad6a22fcb4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Hope downloads the file"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--91aa2f3d-f804-484b-9aee-14fec5c90baf",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malicious File",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.002",
+      "technique_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+      "description": "This document, conkylan.app, now resides in the /Downloads folder on Hope Potter's macOS Catalina Host.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--4a759635-9f2d-480a-a855-45f05024266b"
+      ],
+      "asset_refs": [
+        "attack-asset--38a1ff89-992e-4c43-894b-a204ca2be5ee"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4a759635-9f2d-480a-a855-45f05024266b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Masquerading",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1036",
+      "technique_ref": "attack-pattern--42e8de7b-37b2-4258-905a-6897815e58e0",
+      "description": "The Word document is actually an Application bundle, the the first stage payload.",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--32ecc8a5-bed1-40ca-a33f-9e0be0efa4fb"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--4d72adde-a31f-484b-96fc-ddb09c1dd26b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Thinking it's a normal Word document, the user, Hope Potter (hpotter), double-clicks the conkylan.app"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4a2525ee-6951-4faa-9091-f88387c18b3e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1070",
+      "technique_ref": "attack-pattern--799ace7f-e227-4411-baa0-8868704f2a69",
+      "description": "OceanLotus then removes file information used by security tools",
+      "confidence": 100,
+      "effect_refs": [
+        "attack-action--88d99557-c2f4-4cbf-9ecc-7aa81d51c40d"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--217b966f-2444-4321-867c-489ac0c7ed44",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--5e7dfe2e-ff0d-4a0f-80c3-3420647ae6ff"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--38a1ff89-992e-4c43-894b-a204ca2be5ee",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Hope Potter Laptop",
+      "object_ref": "infrastructure--6a9bf1f9-be0e-4b05-a5de-97f6e047e284"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--6a9bf1f9-be0e-4b05-a5de-97f6e047e284",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "name": "Laptop",
+      "infrastructure_types": [
+        "laptop"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--760b4f4a-3100-4b25-a185-10e8fc501c9a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "value": "192.168.1.1"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--cab0c047-8737-4f55-8303-4f3ea4427cc2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Linux Server"
+    },
+    {
+      "type": "file",
+      "id": "file--ee983a55-3588-49c7-b24c-7d20c981ad33",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "name": "/home/hpotter/.ssh/known_hosts"
+    },
+    {
+      "type": "file",
+      "id": "file--a8f2a642-30c5-4776-a108-0103527ef916",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "name": "/home/hpotter/.bash_history"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--70bfee73-3504-4728-846a-1751ad028b1d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "name": "Ocean Lotus",
+      "goals": [
+        "Political targeting"
+      ],
+      "sophistication": "State-sponsored"
+    },
+    {
+      "type": "file",
+      "id": "file--05643793-e962-4743-b7d2-427fa6230678",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "hashes": {
+        "sha-256": "d014bc1b6f590bfd3fc1e4f938cfec866044a2cc616bd4e08615d1c8c4e5355b"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--af0cd5d4-92f8-4736-af68-d3a89d91ce0f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--8196f7e1-3d8b-42ed-bede-b81bfd38f864",
+      "target_ref": "user-account--3020cde2-1b95-4725-bd4e-4f46e38f06e8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--174591e9-d097-423c-bf88-5787d111a0c0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--2ea61897-a90d-4cae-b835-facc2885cf12",
+      "target_ref": "user-account--3020cde2-1b95-4725-bd4e-4f46e38f06e8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c3823677-3e7e-486a-b127-dc692c217b11",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--32ecc8a5-bed1-40ca-a33f-9e0be0efa4fb",
+      "target_ref": "file--05643793-e962-4743-b7d2-427fa6230678"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb80c131-9ed3-4547-9f10-9e43f58cb2e9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--88d99557-c2f4-4cbf-9ecc-7aa81d51c40d",
+      "target_ref": "file--ee983a55-3588-49c7-b24c-7d20c981ad33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b31ffe65-953b-404b-934c-f750bd8cae25",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--88d99557-c2f4-4cbf-9ecc-7aa81d51c40d",
+      "target_ref": "file--a8f2a642-30c5-4776-a108-0103527ef916"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c57c9796-ea6d-442c-87f8-518515210026",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--53ab2436-71dc-4575-812e-6fad6a22fcb4",
+      "target_ref": "attack-action--2ea61897-a90d-4cae-b835-facc2885cf12"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab245cf9-1a7d-4e65-813e-683aac19fe92",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--4d72adde-a31f-484b-96fc-ddb09c1dd26b",
+      "target_ref": "attack-action--91aa2f3d-f804-484b-9aee-14fec5c90baf"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd8e4431-b35f-4cfe-9f21-5885c1266460",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-asset--38a1ff89-992e-4c43-894b-a204ca2be5ee",
+      "target_ref": "ipv4-addr--760b4f4a-3100-4b25-a185-10e8fc501c9a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--708804da-4afc-4c62-a062-f090b56b8b30",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "file--ee983a55-3588-49c7-b24c-7d20c981ad33",
+      "target_ref": "attack-action--96631858-d587-44a0-8a6d-fb28b5fc59fa"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d6d7395-32b8-431f-bcd5-7b8e6a1e84a1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.161Z",
+      "modified": "2025-07-30T19:47:13.161Z",
+      "relationship_type": "related-to",
+      "source_ref": "file--a8f2a642-30c5-4776-a108-0103527ef916",
+      "target_ref": "attack-action--96631858-d587-44a0-8a6d-fb28b5fc59fa"
+    }
+  ]
+}

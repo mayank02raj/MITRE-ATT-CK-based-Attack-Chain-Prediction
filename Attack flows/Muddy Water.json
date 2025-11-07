@@ -1,0 +1,1053 @@
+{
+  "type": "bundle",
+  "id": "bundle--fd13d0b6-b40d-4015-813c-e33b53ead3c3",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:13.121Z",
+  "modified": "2025-07-30T19:47:13.121Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--c19f23ed-6aa8-4cac-90d0-dfc3dc0bc3d5",
+      "spec_version": "2.1",
+      "created": "2022-10-27T02:44:54.520Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--820515ad-6406-4cf0-928f-b4fdcb3a247c",
+      "start_refs": [
+        "attack-action--2cdde459-21d7-424b-8cfe-676dee071b83",
+        "attack-action--eba614a5-5809-4986-b216-1aa171df0dec"
+      ],
+      "name": "Muddy Water",
+      "description": "Multiple campaigns attributed to an Iranian state-based actor.",
+      "scope": "threat-actor",
+      "external_references": [
+        {
+          "source_name": "Talos Intelligence",
+          "description": "article",
+          "url": "https://blog.talosintelligence.com/iranian-apt-muddywater-targets-turkey/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--820515ad-6406-4cf0-928f-b4fdcb3a247c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "Mia Sanchez",
+      "contact_information": "msanchez@mitre.org"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--271b7d86-4114-418a-80e5-e085637585f1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "MuddyWater",
+      "description": "APT group attributed to Iran's Ministry of Intelliigence and Security (MOIS)",
+      "first_seen": "2017-01-01T00:00:00.000Z",
+      "sophistication": "strategic",
+      "resource_level": "government",
+      "primary_motivation": "organizational-gain"
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--e2269608-672e-4f86-aeac-e4e026c969aa",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "Turkey",
+      "description": "targets Turkish private organizations and governmental institution. used malicious PDFs, XLS files, Windows executables, malicious PowerShell-based downloaders, and canary tokens",
+      "first_seen": "2021-11-01T04:00:00.000Z",
+      "objective": "espionage"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2cdde459-21d7-424b-8cfe-676dee071b83",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Spearphishing Attachment",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1566.001",
+      "technique_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+      "description": "This campaign begins by delivering malicious PDF attachments with embedded links to victims via email",
+      "effect_refs": [
+        "attack-condition--5b19b30a-2f60-4710-a404-c4c3cfccf710"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4e3f6133-4b02-47af-a50b-483944466072",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malicious Link",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.001",
+      "technique_ref": "attack-pattern--ef67e13e-5598-4adc-bdb2-998225874fa9",
+      "description": "The PDF gives an error message, prompting the user to click on a link to the file hosting domain and downloading malicious XLS file containing macros.",
+      "effect_refs": [
+        "attack-action--1695cced-1223-43ce-87b5-4c0ed7b1a4ad"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--3daf3bb9-6016-46fd-af73-73091d4ce6b5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "File hosting domain",
+      "description": "snapfile[.]org hosts malicious excel documents (XLS maldocs) and executables",
+      "infrastructure_types": [
+        "hosting-malware"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--6ac23433-288d-4f2f-964e-f4e58f5854eb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "XLS maldocs",
+      "description": "Malicious excel documents delivered to a victim in the form of a PDF document with embedded links. Some files had Turkish language names and masqueraded as legitimate documents.",
+      "tool_types": [
+        "exploitation"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--5b19b30a-2f60-4710-a404-c4c3cfccf710",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "User opens the PDF attachment"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2bf75e39-3cc3-4ee9-aa3f-35700a2da4ba",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Registry Run Keys / Startup Folder",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1547.001",
+      "technique_ref": "attack-pattern--9efb1ea7-c37b-4595-9640-b7680cd84279",
+      "description": "VBA macros creates a VB script set up persistence by creating a malicious Registry Run key for the infected user: HKCU\\Software\\Microsoft\\windows\\CurrentVersion\\Run | <random>",
+      "effect_refs": [
+        "attack-action--bbbecdfe-0462-4dbe-b07a-d0c60d4a651e",
+        "attack-action--f867b082-394a-4951-8fcb-70d8e082d42f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f867b082-394a-4951-8fcb-70d8e082d42f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Visual Basic",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.005",
+      "technique_ref": "attack-pattern--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+      "description": "An intermediate VB Script file is used to execute a dropped PowerShell script for persistence",
+      "effect_refs": [
+        "attack-action--80364c38-1930-40ab-a6aa-7d01bc8a11ae"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--80364c38-1930-40ab-a6aa-7d01bc8a11ae",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "The PS script is located in the maldoc's metadata, with later versions obfuscated, and is dropped by the macro. It uses the VB Script file to execute. It downloads and executes another PowerShell script from a remote location. It attempts twice to download the PowerShell script, with a custom timeout of 40 seconds and a custom user agent.",
+      "effect_refs": [
+        "attack-action--096fea1d-4466-4468-970f-81a7e660ba87"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--eba614a5-5809-4986-b216-1aa171df0dec",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Spearphishing Attachment",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1566.001",
+      "technique_ref": "attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597",
+      "description": "This campaign begins by delivering malicious PDF attachments with embedded links to victims via email.",
+      "effect_refs": [
+        "attack-condition--31948bdf-3667-4389-8f7f-cb1570cd7745"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0d651a67-cc50-45b3-a023-a6ad0b4486d5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malicious Link",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.001",
+      "technique_ref": "attack-pattern--ef67e13e-5598-4adc-bdb2-998225874fa9",
+      "description": "The PDF gives an error message, prompting the user to click on a link to the file hosting domain",
+      "effect_refs": [
+        "attack-action--68b96b87-8744-49dd-9028-437cea0aa4ef"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--7c6a0f96-9fa4-41ed-8275-26ec5fe77218",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "File hosting domain",
+      "description": "snapfile[.]org hosts malicious executables",
+      "infrastructure_types": [
+        "hosting-malware"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--116c4abb-ee23-46b4-9bd9-b1894cc68407",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "Windows Executables",
+      "description": "Malicious executables delivered to a victim in the form of a PDF document with embedded links. Some files had Turkish language names and masqueraded as legitimate documents.",
+      "tool_types": [
+        "exploitation"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--31948bdf-3667-4389-8f7f-cb1570cd7745",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "User opens the PDF attachment"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--68b96b87-8744-49dd-9028-437cea0aa4ef",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "The file hosting domain dropped a malicious executable.",
+      "asset_refs": [
+        "attack-asset--e8a0c335-2fd4-4b84-84ee-7b2e77f10520"
+      ],
+      "effect_refs": [
+        "attack-condition--9416c506-54ff-40d7-97c3-527c2aa6b63c"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--e8a0c335-2fd4-4b84-84ee-7b2e77f10520",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Specific executable file",
+      "description": "Surec_No_cc2021-pdf377811f-66ad-4397-bd35-3247101e2fda-eta332018.exe"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6006c648-faa9-4e95-b8ec-1f70ccac597a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Masquerading",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1036",
+      "technique_ref": "attack-pattern--42e8de7b-37b2-4258-905a-6897815e58e0",
+      "description": "A decoy PDF or Office document in hex format is dropped into the user's temporary folder. The hex representation of the decoy document is hexlified to create a readable copy in the %temp% folder",
+      "effect_refs": [
+        "attack-condition--2d4dd78c-20f4-4852-a8e2-aa59267dcb5f"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--9416c506-54ff-40d7-97c3-527c2aa6b63c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The executable runs"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--2d4dd78c-20f4-4852-a8e2-aa59267dcb5f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Decoy file is opened by the system PDF or document reader and displayed to the victim"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fd0b491a-5f70-4ec4-b8c0-b75f369ae327",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Directory created",
+      "description": "Implant creates directory in user's home folder",
+      "effect_refs": [
+        "attack-action--28dfeb21-682b-455f-8306-c9f955ef0be4",
+        "attack-action--9f5f5085-1c3c-474a-a23c-85c51b8b547c"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9f5f5085-1c3c-474a-a23c-85c51b8b547c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "Implant drops an instrumentor script that is used to activate the next stage from a disk called \".CloudCache.conf\"",
+      "effect_refs": [
+        "attack-operator--1bd97caf-4755-4175-9d37-f8d01eac97fb"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--28dfeb21-682b-455f-8306-c9f955ef0be4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "Implant drops a downloader script used to download the next stage from a remote location for execution on the endpoint called \".CloudDrive.conf\"",
+      "effect_refs": [
+        "attack-operator--1bd97caf-4755-4175-9d37-f8d01eac97fb"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--95d7e5a1-11fe-4f77-8839-87edb7454ff1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Registry Run Keys / Startup Folder",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1547.001",
+      "technique_ref": "attack-pattern--9efb1ea7-c37b-4595-9640-b7680cd84279",
+      "description": "A Registry Run key for the infected user: HKCU\\SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\RUN | <Some Application Name>",
+      "effect_refs": [
+        "attack-condition--cc948303-0208-477f-840f-bceda0c93a67"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--0bbec16f-8351-4bee-b95a-155ba95923b6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "LoLBin",
+      "description": "LoLBin DLL called SyncAppvPublishingServer.vbs is sometimes used to execute the PowerShell script on reboot or re-login",
+      "tool_types": [
+        "exploitation"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e81766d0-7e29-4d1e-87b1-410ae757243f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Execution",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "description": "SyncAppvPublishingServer.vbs  is used to execute the code stored in the instrumentor script",
+      "effect_refs": [
+        "attack-action--1b447a8a-5fb1-4636-a84e-958b7bb1d801"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1b447a8a-5fb1-4636-a84e-958b7bb1d801",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Deobfuscate/Decode Files or Information",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1140",
+      "technique_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+      "description": "The instrumentor script base64 decodes the contents of hte download script",
+      "effect_refs": [
+        "attack-action--2fe12f3d-9291-4404-be71-535930cc3068"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a3b163ef-2b16-4865-a400-044b5c659bfc",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "The downloader script downloads and executes another PowerShell script from a remote location.",
+      "effect_refs": [
+        "attack-action--b7205f44-3021-4755-961b-0fd7ae6604c5"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--1bd97caf-4755-4175-9d37-f8d01eac97fb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--95d7e5a1-11fe-4f77-8839-87edb7454ff1"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--cc948303-0208-477f-840f-bceda0c93a67",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "The downloaded PowerShell scripts execute in order."
+    },
+    {
+      "type": "tool",
+      "id": "tool--980cbcb5-861a-454b-b8e2-4fca98fc893d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "SyncAppvPublishingServer.vbs",
+      "description": "a LoLBin DLL",
+      "tool_types": [
+        "exploitation"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2fe12f3d-9291-4404-be71-535930cc3068",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Execution",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "description": "The instrumentor script executes the decoded download script",
+      "effect_refs": [
+        "attack-action--a3b163ef-2b16-4865-a400-044b5c659bfc"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--4caa8a2c-e56a-4673-a2f4-c879df88af0a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "abstract": "Older variant of the campaign",
+      "content": "This path shows the behaviors observed in earlier campaigns. This is the path explained in the Attack Flow \"Best Practices\" guide.",
+      "object_refs": [
+        "attack-action--2cdde459-21d7-424b-8cfe-676dee071b83"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--3b3a56ff-5fdf-4e93-9466-9de81b3788a0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "abstract": "Newer variation of the campaign",
+      "content": "This path shows the behaviors observed in later campaigns.",
+      "object_refs": [
+        "attack-action--eba614a5-5809-4986-b216-1aa171df0dec"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--0c6af830-1634-478b-ad89-5430058ca4c7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "abstract": "Evolution of Maldocs",
+      "content": "The maldocs from the campaign show an evolution of their implementation, resulting in completely obfuscated versions. Some documents contain subtle changes, such as including information in the metadata fields, indicating the potential that attackers were testing different version of the maldocs. Initial versions of the maldocs included an un-obfuscated PowerShell payload in the document's comments fields. Subsequent iterations included obfuscated code blocks.",
+      "object_refs": [
+        "attack-action--1695cced-1223-43ce-87b5-4c0ed7b1a4ad"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--380fd035-5644-40c0-9197-709d2908a14b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "abstract": "Tracking Tokens",
+      "content": "Tracking Tokens: Tracking Infections - Token created by the same user as the canary token. Attackers use this token to tracking who is detonating the malicious code to keep track of successful infections. Tracking Tokens: Anti-Analysis - Systems housing malicious payloads may require multiple, simultaneous requests to the token. This requirement would prevent researchers from requesting the malicious payloads without registering with the canary tokens using a HTTP request. Tracking Tokens: Timing Checks - A short time interval between token requests and payload requests can indicate a automated analysis via sandbox. Attackers could prevent payloads from downloading if the timing between requests is too small. Tracking Tokens: Blocked Infrastructure - The tokens can be monitored to determine if payloads are not being requested from the payload server. If repeated requests to the canary tokens, but not the payload server, this could indicate that the payload server is being blocked.",
+      "object_refs": [
+        "attack-action--8ad927ad-f4b2-44f4-b81c-052f7f0f8245"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--6c27533e-aa27-4f1b-a8d1-526c7be40acb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "abstract": "Executables",
+      "content": "Executables use a Turkish name and could be delivered via a malicious PDF or independently.",
+      "object_refs": [
+        "attack-action--68b96b87-8744-49dd-9028-437cea0aa4ef"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8ad927ad-f4b2-44f4-b81c-052f7f0f8245",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Canary Tokens",
+      "description": "Included in the latest versions of the VBA code. Canary tokens are embedded in objects like documents, web pages, and emails. When the object is opened, a HTTP request to canarytokens.com is generated and alerts the token's owner that the object was opened. VBA code can make HTTP requests to a canary token from canarytokens[.]com. The token silently executes twice during the VBA macro execution."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b7205f44-3021-4755-961b-0fd7ae6604c5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "The PS script is located in the maldoc's metadata, with later versions obfuscated, and is dropped by the macro. It uses the VB Script file to execute. It downloads and executes another PowerShell script from a remote location. It attempts twice to download the PowerShell script, with a custom timeout of 40 seconds and a custom user agent."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--908c11b7-f35d-49fc-b30d-f448dc881bb2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Collection",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "description": "Collects intellectual property data from private entities, universities, and research labs.",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--e75ff9b6-0cf0-444a-95c4-b56e3894d642"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4e9f73e2-7198-490a-87c9-2b45cb305f48",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data Encrypted for Impact",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1486",
+      "technique_ref": "attack-pattern--b80d107d-fa0d-4b60-9684-b0433e8bdba0",
+      "confidence": 0
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e75ff9b6-0cf0-444a-95c4-b56e3894d642",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration",
+      "tactic_id": "TA0010",
+      "tactic_ref": "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462",
+      "description": "Exfiltrate intellectual property.",
+      "confidence": 0
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--096fea1d-4466-4468-970f-81a7e660ba87",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "The downloader script downloads and executes another PowerShell script from a remote location.",
+      "effect_refs": [
+        "attack-action--c1c8d659-2a90-415a-a671-5ee7a3e1510e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c1c8d659-2a90-415a-a671-5ee7a3e1510e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "Executes a final payload stage.",
+      "confidence": 0,
+      "effect_refs": [
+        "attack-action--908c11b7-f35d-49fc-b30d-f448dc881bb2",
+        "attack-action--4e9f73e2-7198-490a-87c9-2b45cb305f48"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--f472307a-9dec-4621-96fd-3acac0a72d93",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "abstract": "Speculation",
+      "content": "Cisco researchers were unable to obtain a copy of the final stage payload for analysis; they speculated this final part of the flow based on prior MuddyWater behavior.",
+      "object_refs": [
+        "attack-action--c1c8d659-2a90-415a-a671-5ee7a3e1510e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e057f8fb-042b-48cb-a44e-c8993c64186b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Ingress Tool Transfer",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1105",
+      "technique_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+      "description": "The Excel macros download and execute additional malware stages.",
+      "effect_refs": [
+        "attack-action--80364c38-1930-40ab-a6aa-7d01bc8a11ae",
+        "attack-action--f867b082-394a-4951-8fcb-70d8e082d42f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f7334146-26ec-456d-98aa-26d3cd1e2721",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Visual Basic",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.005",
+      "technique_ref": "attack-pattern--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+      "description": "The VBA Macros in the Excel file begin executing the infection chain.",
+      "effect_refs": [
+        "attack-action--e057f8fb-042b-48cb-a44e-c8993c64186b",
+        "attack-action--8ad927ad-f4b2-44f4-b81c-052f7f0f8245",
+        "attack-action--2bf75e39-3cc3-4ee9-aa3f-35700a2da4ba"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--45ff0f6b-5ec8-4b27-87a0-6885b6c6108d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "name": "Teklif_form_onaylı.xls",
+      "mime_type": "application/vnd.ms-excel"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1695cced-1223-43ce-87b5-4c0ed7b1a4ad",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malicious File",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1204.002",
+      "technique_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+      "description": "The link drops a malicious Excel file that contains VBA macros.",
+      "effect_refs": [
+        "attack-action--f7334146-26ec-456d-98aa-26d3cd1e2721"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--bbbecdfe-0462-4dbe-b07a-d0c60d4a651e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Binary Proxy Execution",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1218",
+      "technique_ref": "attack-pattern--457c7820-d331-465a-915e-42f85500ccc4",
+      "description": "LoLBin DLL called pcwutl.dll is sometimes used to execute the VBScript on reboot or re-login."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65538087-bd92-427f-abe7-070f99663b3c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--e2269608-672e-4f86-aeac-e4e026c969aa",
+      "target_ref": "threat-actor--271b7d86-4114-418a-80e5-e085637585f1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--280ee30f-aace-4160-9fdf-02e680d71f81",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--4e3f6133-4b02-47af-a50b-483944466072",
+      "target_ref": "infrastructure--3daf3bb9-6016-46fd-af73-73091d4ce6b5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c319da1a-a2ba-49b6-812b-fc1d9d9ae7ce",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--5b19b30a-2f60-4710-a404-c4c3cfccf710",
+      "target_ref": "attack-action--4e3f6133-4b02-47af-a50b-483944466072"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df59deac-8235-439b-951e-14a8f7aec0e6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--0d651a67-cc50-45b3-a023-a6ad0b4486d5",
+      "target_ref": "infrastructure--7c6a0f96-9fa4-41ed-8275-26ec5fe77218"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e10d965-d94b-43ad-a153-d4e6590248a1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--31948bdf-3667-4389-8f7f-cb1570cd7745",
+      "target_ref": "attack-action--0d651a67-cc50-45b3-a023-a6ad0b4486d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9abcc23c-aa01-471e-8270-da22baffd028",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--68b96b87-8744-49dd-9028-437cea0aa4ef",
+      "target_ref": "tool--116c4abb-ee23-46b4-9bd9-b1894cc68407"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd9c1fd9-00a8-4a4f-8bb1-0f46b328a902",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--9416c506-54ff-40d7-97c3-527c2aa6b63c",
+      "target_ref": "attack-action--6006c648-faa9-4e95-b8ec-1f70ccac597a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95bbcc98-9050-4ed5-865a-7b9f8f2d169d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--2d4dd78c-20f4-4852-a8e2-aa59267dcb5f",
+      "target_ref": "attack-action--fd0b491a-5f70-4ec4-b8c0-b75f369ae327"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c4be9a9-fc79-49e5-bdf3-e68ae2695d97",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--95d7e5a1-11fe-4f77-8839-87edb7454ff1",
+      "target_ref": "tool--0bbec16f-8351-4bee-b95a-155ba95923b6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ebabec1-d2e2-4b0f-a006-2e0a0f2b1dba",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--e81766d0-7e29-4d1e-87b1-410ae757243f",
+      "target_ref": "tool--980cbcb5-861a-454b-b8e2-4fca98fc893d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b705492-e7c9-429a-985d-40362c3ff964",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--cc948303-0208-477f-840f-bceda0c93a67",
+      "target_ref": "attack-action--e81766d0-7e29-4d1e-87b1-410ae757243f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5bedc9d3-b8c6-4c8d-92c7-3b8f2c0f176f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--1695cced-1223-43ce-87b5-4c0ed7b1a4ad",
+      "target_ref": "tool--6ac23433-288d-4f2f-964e-f4e58f5854eb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c0a19047-cfb6-4209-ac1b-9609c56fd499",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:13.121Z",
+      "modified": "2025-07-30T19:47:13.121Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--1695cced-1223-43ce-87b5-4c0ed7b1a4ad",
+      "target_ref": "file--45ff0f6b-5ec8-4b27-87a0-6885b6c6108d"
+    }
+  ]
+}

@@ -1,0 +1,1652 @@
+{
+  "type": "bundle",
+  "id": "bundle--60f661bb-dac8-48d9-b54a-78489605244d",
+  "spec_version": "2.1",
+  "created": "2025-07-30T19:47:12.850Z",
+  "modified": "2025-07-30T19:47:12.850Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--08a793aa-4e4f-4fcb-b5db-419b8e27b2e8",
+      "spec_version": "2.1",
+      "created": "2024-04-15T14:23:45.755Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--9220a1e2-c774-475c-9522-341318f63bb3",
+      "start_refs": [
+        "attack-action--32234997-aeab-4177-992d-8eafe175f42a",
+        "attack-action--2d7c7f99-7ffd-4921-9e21-22df6678d57b",
+        "attack-action--ba3f0f10-a11d-418c-b773-00fb26412a91",
+        "attack-action--2867ece0-4eb2-4d6d-b824-affa357d74a0",
+        "attack-action--d3a9b4b8-88bf-43c6-9cae-a1f7b9a93416",
+        "attack-action--4fab276c-80c0-4b18-93c5-b37f8e788230",
+        "attack-action--e5f3487d-fe8f-4f0a-9e02-1db5901794cc",
+        "attack-action--eda0131b-8550-4cfc-b5cc-d77db9d29a81",
+        "attack-action--f6e15450-48cf-46da-92c3-028c14a18cfd",
+        "attack-action--89bfd82d-5557-4d44-8a42-cb3df7b1ea89",
+        "attack-action--84217add-6dd2-4c0f-b755-a062566fc24c",
+        "attack-action--6bdf557c-8af1-44cf-882b-35146e5dfca1",
+        "attack-action--8df074e4-2f74-41e3-a89b-134eb1bbb55e",
+        "attack-action--e5ddaf28-de3d-45af-9651-7f6ce739ad66",
+        "attack-action--8f7c3f72-be6d-4ee6-bdd1-2821d19c2758",
+        "attack-action--6bd52eec-95e7-4703-9911-bdbc9d9e4fb2",
+        "attack-action--9cf8b16c-464e-4976-83d9-6d48486a3eb8",
+        "attack-action--2af74e9a-0119-465a-a5ef-7fc349f354bc",
+        "attack-action--8f2b5ae8-0863-4580-9970-7e5d264a520d",
+        "attack-action--0f3f233c-aa06-4a7a-a707-04fe6ad76d6b",
+        "attack-action--b94fa2a2-c1e9-4537-8ccb-0d35b7a48dad",
+        "attack-action--ec135ca7-c982-49fb-91cf-25c6b1dd40c3",
+        "attack-action--87dca2ec-0ec6-488f-a366-9363905d4cea",
+        "attack-action--be373544-0e5f-42c3-ba3c-b5801128d67e",
+        "attack-action--fe72b1b9-5fbd-4bae-b962-54503a5b416f",
+        "attack-action--5f9f61a9-1db6-4e03-9b94-9834f5bd3646",
+        "attack-action--0f2a453c-b920-4dc9-ac19-e70faa32e561",
+        "attack-action--37b85046-ebf5-4d8a-9bab-274975858589",
+        "attack-action--643f38b0-d8d8-4d51-8ab4-9c0c91814167"
+      ],
+      "name": "Example Attack Tree",
+      "description": "This flow illustrates how to build an attack tree using Attack Flow Builder.",
+      "scope": "attack-tree"
+    },
+    {
+      "type": "identity",
+      "id": "identity--9220a1e2-c774-475c-9522-341318f63bb3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.850Z",
+      "modified": "2025-07-30T19:47:12.850Z",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization",
+      "contact_information": "ctid@mitre.org"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--df58d6df-3e8c-43f2-8d61-5950c8d294b4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Track Device in Use",
+      "effect_refs": [
+        "attack-operator--23ad773e-3bc8-4af0-8b2c-18fe8cfe1548"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a926cfec-e248-4838-ba81-880059c5d6c3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Aquire User GPS Map",
+      "effect_refs": [
+        "attack-operator--23ad773e-3bc8-4af0-8b2c-18fe8cfe1548"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--55c18a7c-69a0-4583-8948-0ac8e468b8bf",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--b3763db7-a29b-4cbe-9c15-8168f72e5540"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--a502b434-7756-4022-a0a5-1071b91146c3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--5e7ba062-16ec-488b-b957-1b74559e2778"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5e7ba062-16ec-488b-b957-1b74559e2778",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Acquire User Location Information From the Web",
+      "effect_refs": [
+        "attack-operator--23ad773e-3bc8-4af0-8b2c-18fe8cfe1548"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--32234997-aeab-4177-992d-8eafe175f42a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Purchase Dataset Containing User Location Information",
+      "effect_refs": [
+        "attack-operator--55c18a7c-69a0-4583-8948-0ac8e468b8bf"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3546afe8-cedc-4068-b68a-1f7504cefec7",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Isolate User Data",
+      "effect_refs": [
+        "attack-operator--a502b434-7756-4022-a0a5-1071b91146c3"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--23ad773e-3bc8-4af0-8b2c-18fe8cfe1548",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--934d0d45-2c98-4886-a5da-f88da2295a65"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--7cf24d0d-f1bf-45c0-98de-13a496c42233",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--3546afe8-cedc-4068-b68a-1f7504cefec7"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2d7c7f99-7ffd-4921-9e21-22df6678d57b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Find a Free Copy of the Dataset Containing User Location Information",
+      "effect_refs": [
+        "attack-operator--55c18a7c-69a0-4583-8948-0ac8e468b8bf"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ba3f0f10-a11d-418c-b773-00fb26412a91",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Synthesize Known User Data and Information Within Dataset",
+      "effect_refs": [
+        "attack-operator--7cf24d0d-f1bf-45c0-98de-13a496c42233"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2867ece0-4eb2-4d6d-b824-affa357d74a0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Compile Known User Data",
+      "effect_refs": [
+        "attack-operator--7cf24d0d-f1bf-45c0-98de-13a496c42233"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d034504f-53c8-4d69-b18d-77ce33763e44",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Access Tracker Data via Web Portal",
+      "effect_refs": [
+        "attack-operator--af11c88f-0967-4cdc-9087-337c45a05a6c"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--af11c88f-0967-4cdc-9087-337c45a05a6c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--a926cfec-e248-4838-ba81-880059c5d6c3"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--1178dc20-2630-43ba-9272-d40cbc7638d1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--d034504f-53c8-4d69-b18d-77ce33763e44"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--689cbc21-bf1f-4983-a600-c20f21057861",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Leverage Existing User Credentials On The Web",
+      "effect_refs": [
+        "attack-operator--1178dc20-2630-43ba-9272-d40cbc7638d1"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--92eb629c-d257-4086-bb80-277eac885d6d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--689cbc21-bf1f-4983-a600-c20f21057861"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d3a9b4b8-88bf-43c6-9cae-a1f7b9a93416",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Acquire User Credentials From Public Database",
+      "effect_refs": [
+        "attack-operator--92eb629c-d257-4086-bb80-277eac885d6d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4fab276c-80c0-4b18-93c5-b37f8e788230",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Purchase User Credentials",
+      "effect_refs": [
+        "attack-operator--92eb629c-d257-4086-bb80-277eac885d6d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--40479c06-8a56-4ee9-b0af-4c6c62bfb3ae",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Take Credentials Directly From the User",
+      "effect_refs": [
+        "attack-operator--1178dc20-2630-43ba-9272-d40cbc7638d1"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--f6db8999-ead5-427a-8c6b-99ee5272fbe0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--40479c06-8a56-4ee9-b0af-4c6c62bfb3ae"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--781b2bd9-af21-40a6-affe-5f9efca8876e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "User Provides Login Information",
+      "effect_refs": [
+        "attack-operator--f6db8999-ead5-427a-8c6b-99ee5272fbe0"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f736024b-9694-45d0-9696-850f33dd842a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Send User Phishing Message",
+      "effect_refs": [
+        "attack-operator--f6db8999-ead5-427a-8c6b-99ee5272fbe0"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--71a5d49f-a9ab-4799-b61f-8ad69d53fe52",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--781b2bd9-af21-40a6-affe-5f9efca8876e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--3fffa48a-f681-4714-be29-4939785ed0db",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Deploy Keylogger On User’s Device",
+      "effect_refs": [
+        "attack-operator--71a5d49f-a9ab-4799-b61f-8ad69d53fe52"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2c54ec7c-5722-4188-8a81-786c61b7d472",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Direct User to Duplicate Site",
+      "effect_refs": [
+        "attack-operator--71a5d49f-a9ab-4799-b61f-8ad69d53fe52"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--bb5ec01a-10e9-48ef-9f9a-e0a50ffbc4fd",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--3fffa48a-f681-4714-be29-4939785ed0db"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--567d1a9c-069b-46ea-a8a5-b62aa80724f0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--2c54ec7c-5722-4188-8a81-786c61b7d472"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e5f3487d-fe8f-4f0a-9e02-1db5901794cc",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Record User Login Information",
+      "effect_refs": [
+        "attack-operator--bb5ec01a-10e9-48ef-9f9a-e0a50ffbc4fd"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--eda0131b-8550-4cfc-b5cc-d77db9d29a81",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Prompt User for Login Information",
+      "effect_refs": [
+        "attack-operator--567d1a9c-069b-46ea-a8a5-b62aa80724f0"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--212e23fe-c04f-47dd-a17a-3e6fcd17fceb",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--f736024b-9694-45d0-9696-850f33dd842a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f6e15450-48cf-46da-92c3-028c14a18cfd",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "User Interacts With Malicious Media",
+      "effect_refs": [
+        "attack-operator--212e23fe-c04f-47dd-a17a-3e6fcd17fceb"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--3f076b50-9180-48dc-99cf-a80363387a00",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--df58d6df-3e8c-43f2-8d61-5950c8d294b4"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b3763db7-a29b-4cbe-9c15-8168f72e5540",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Aquire the Data",
+      "effect_refs": [
+        "attack-operator--a502b434-7756-4022-a0a5-1071b91146c3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--28895861-51f4-4b86-9b03-b08ab43e3013",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Identify User’s Device",
+      "effect_refs": [
+        "attack-operator--3f076b50-9180-48dc-99cf-a80363387a00"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2bcc739f-eadd-4435-9840-52dd1ca02b65",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Capture Tracker Data",
+      "effect_refs": [
+        "attack-operator--3f076b50-9180-48dc-99cf-a80363387a00"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--89bfd82d-5557-4d44-8a42-cb3df7b1ea89",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Determine Approximate Location",
+      "effect_refs": [
+        "attack-operator--e51fb8f0-ee0f-4ae2-894d-33e31f042b1f"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--e51fb8f0-ee0f-4ae2-894d-33e31f042b1f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--28895861-51f4-4b86-9b03-b08ab43e3013"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--d0a56090-36af-4b73-9c79-421b835786d3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--2bcc739f-eadd-4435-9840-52dd1ca02b65"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--bfb129d5-834d-4ab0-b4af-3fdcd27c33e9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Proximate Tracking",
+      "effect_refs": [
+        "attack-operator--d0a56090-36af-4b73-9c79-421b835786d3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--14899d3b-e08d-4968-af67-b170883cc16b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Tracking",
+      "effect_refs": [
+        "attack-operator--d0a56090-36af-4b73-9c79-421b835786d3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f253ad7f-8984-4bce-b279-c63148047fd0",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Implant Spyware On Tracker",
+      "effect_refs": [
+        "attack-operator--d0a56090-36af-4b73-9c79-421b835786d3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1500f45d-4647-4b35-80fa-bdf109db2c5f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Modify Tracker Firmware",
+      "effect_refs": [
+        "attack-operator--d0a56090-36af-4b73-9c79-421b835786d3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c3735d6b-b4f9-4fad-ad8d-689ae46e3822",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Associate the Device with a Unique Identifier",
+      "effect_refs": [
+        "attack-operator--e51fb8f0-ee0f-4ae2-894d-33e31f042b1f"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--e8cff81f-61a2-4b15-92fd-2549ed743924",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--c3735d6b-b4f9-4fad-ad8d-689ae46e3822"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--84217add-6dd2-4c0f-b755-a062566fc24c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Learn Tracker Serial Number",
+      "effect_refs": [
+        "attack-operator--e8cff81f-61a2-4b15-92fd-2549ed743924"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--bab5422f-0bdb-4bae-9105-9113bbef2c6a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--6b827d10-78f0-41bb-b255-50a63d0dfa78"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6b827d10-78f0-41bb-b255-50a63d0dfa78",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Wirelessly Connect to Tracker",
+      "effect_refs": [
+        "attack-operator--3ec5bda8-16f9-4db0-9c05-991ebe1ec501"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--3ec5bda8-16f9-4db0-9c05-991ebe1ec501",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--bfb129d5-834d-4ab0-b4af-3fdcd27c33e9"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6bdf557c-8af1-44cf-882b-35146e5dfca1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Eavesdrop on Device Communications",
+      "effect_refs": [
+        "attack-operator--bab5422f-0bdb-4bae-9105-9113bbef2c6a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8df074e4-2f74-41e3-a89b-134eb1bbb55e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Get Within Wireless Range of the Device",
+      "effect_refs": [
+        "attack-operator--bab5422f-0bdb-4bae-9105-9113bbef2c6a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--d9ab6731-cbc3-4c3d-8326-7b1130d80fe4",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Local Data is Encrypted",
+      "effect_refs": [
+        "attack-operator--c48e868d-1b2f-4245-a342-41f06202c898"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5494b220-1055-40ec-b53c-785ac365d859",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obtain Locally Encrypted Data",
+      "effect_refs": [
+        "attack-operator--c20eb04a-ffa7-4d1d-8105-1bd5e99689c5"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8a40d5c0-e51f-4d31-8039-490df409690e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Man In The Middle Attack",
+      "effect_refs": [
+        "attack-operator--791ddebe-75e9-4d16-ab2f-0e9bf367f88c"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--e5ddaf28-de3d-45af-9651-7f6ce739ad66",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Configure an Alternative Server Address Inside Victim’s Smartphone App",
+      "effect_refs": [
+        "attack-operator--47cbb476-bb10-44b6-80a0-f6c9eabbbcfe"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--712c71dd-cee6-4605-9db4-3acddbc01af5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Re-associate Tracker",
+      "effect_refs": [
+        "attack-operator--70120336-4ff9-4a25-a167-f2bb3ac02044"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8f7c3f72-be6d-4ee6-bdd1-2821d19c2758",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Associate Tracker With a Controlled Device Account",
+      "effect_refs": [
+        "attack-operator--47cbb476-bb10-44b6-80a0-f6c9eabbbcfe"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--47cbb476-bb10-44b6-80a0-f6c9eabbbcfe",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--712c71dd-cee6-4605-9db4-3acddbc01af5"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--791ddebe-75e9-4d16-ab2f-0e9bf367f88c",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--b5801f0e-4e0c-4ef7-81ad-20a77bdd20c1"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--c20eb04a-ffa7-4d1d-8105-1bd5e99689c5",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--d9ab6731-cbc3-4c3d-8326-7b1130d80fe4"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--70120336-4ff9-4a25-a167-f2bb3ac02044",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--8a40d5c0-e51f-4d31-8039-490df409690e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6bd52eec-95e7-4703-9911-bdbc9d9e4fb2",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Replay Authentication Sequence Over Local BLE",
+      "effect_refs": [
+        "attack-operator--70120336-4ff9-4a25-a167-f2bb3ac02044"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9cf8b16c-464e-4976-83d9-6d48486a3eb8",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Get Within Wireless Range of the Device",
+      "effect_refs": [
+        "attack-operator--c20eb04a-ffa7-4d1d-8105-1bd5e99689c5"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--c48e868d-1b2f-4245-a342-41f06202c898",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--14899d3b-e08d-4968-af67-b170883cc16b"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--6e08088c-e560-4b93-90bd-a05104c89a59",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Local Data Is in Plaintext",
+      "effect_refs": [
+        "attack-operator--c48e868d-1b2f-4245-a342-41f06202c898"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--a8c00ec1-1a8d-4e2d-ae47-3622f47af05a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--6e08088c-e560-4b93-90bd-a05104c89a59"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--2af74e9a-0119-465a-a5ef-7fc349f354bc",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Associate Data with Unique Device ID",
+      "effect_refs": [
+        "attack-operator--a8c00ec1-1a8d-4e2d-ae47-3622f47af05a"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--bd09a07e-82f1-4f1f-8c22-ceabb70c21df",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--5494b220-1055-40ec-b53c-785ac365d859"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b5801f0e-4e0c-4ef7-81ad-20a77bdd20c1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Establish Control Over Victim’s Network",
+      "effect_refs": [
+        "attack-operator--bd09a07e-82f1-4f1f-8c22-ceabb70c21df"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8f2b5ae8-0863-4580-9970-7e5d264a520d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Trigger Synchronization Over BLE",
+      "effect_refs": [
+        "attack-operator--bd09a07e-82f1-4f1f-8c22-ceabb70c21df"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--5914a3ec-3646-4d9d-a2dd-f18952434055",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--f253ad7f-8984-4bce-b279-c63148047fd0"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7cfa4eee-31e8-4552-8d5d-8578dc688da9",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Device Data is Encrypted",
+      "effect_refs": [
+        "attack-operator--5914a3ec-3646-4d9d-a2dd-f18952434055"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1ebed5d6-b266-4890-b6cf-196ef440f7aa",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Device Data Is Unencrypted",
+      "effect_refs": [
+        "attack-operator--5914a3ec-3646-4d9d-a2dd-f18952434055"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--13ade682-6d3b-4d6c-98be-2695a693273a",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Local Data is Encrypted",
+      "effect_refs": [
+        "attack-operator--1c6c2cdd-ebbe-4338-88a3-c962ae10bfb1"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--1c6c2cdd-ebbe-4338-88a3-c962ae10bfb1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--7cfa4eee-31e8-4552-8d5d-8578dc688da9"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--d908dbfe-4518-48c0-9182-03a9bda30a32",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--13ade682-6d3b-4d6c-98be-2695a693273a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0f3f233c-aa06-4a7a-a707-04fe6ad76d6b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.852Z",
+      "modified": "2025-07-30T19:47:12.852Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Local Data is Encrypted",
+      "effect_refs": [
+        "attack-operator--d908dbfe-4518-48c0-9182-03a9bda30a32"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b94fa2a2-c1e9-4537-8ccb-0d35b7a48dad",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Push Malicious Firmware Update",
+      "effect_refs": [
+        "attack-operator--1c6c2cdd-ebbe-4338-88a3-c962ae10bfb1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ec135ca7-c982-49fb-91cf-25c6b1dd40c3",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Device Data Is Unencrypted",
+      "effect_refs": [
+        "attack-operator--16805ea6-27ac-484b-9a70-50b6e34d252d"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--16805ea6-27ac-484b-9a70-50b6e34d252d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--1ebed5d6-b266-4890-b6cf-196ef440f7aa"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--87dca2ec-0ec6-488f-a366-9363905d4cea",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Disable Authentication",
+      "effect_refs": [
+        "attack-operator--f4373071-24c9-4dda-84d2-c547a120f3f6"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--be373544-0e5f-42c3-ba3c-b5801128d67e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Re-Associate Device To Controlled User Account",
+      "effect_refs": [
+        "attack-operator--341a85ab-69d4-4fd8-88c8-13ae6893a42d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fe72b1b9-5fbd-4bae-b962-54503a5b416f",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Replace Tracker After Firmware Modification",
+      "effect_refs": [
+        "attack-operator--8cda965c-9868-48b3-b162-8b7ee31081d1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5f9f61a9-1db6-4e03-9b94-9834f5bd3646",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Steal Tracker",
+      "effect_refs": [
+        "attack-operator--8cda965c-9868-48b3-b162-8b7ee31081d1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0f2a453c-b920-4dc9-ac19-e70faa32e561",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Disable Encryption",
+      "effect_refs": [
+        "attack-operator--f4373071-24c9-4dda-84d2-c547a120f3f6"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--97c3d7f6-6e8c-4d0c-ac4b-7ed3f3b30f2e",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Modify Firmware",
+      "effect_refs": [
+        "attack-operator--341a85ab-69d4-4fd8-88c8-13ae6893a42d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--520b86e9-1f67-4431-82fa-035f3c01cf42",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Deconstruct User Device",
+      "effect_refs": [
+        "attack-operator--8cda965c-9868-48b3-b162-8b7ee31081d1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7dcf2348-739a-4a21-b165-69eb4c88799b",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exploit Physical Tracker",
+      "effect_refs": [
+        "attack-operator--3b59fba0-08d8-44ff-a145-ddd16697da3d"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--3b59fba0-08d8-44ff-a145-ddd16697da3d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--1500f45d-4647-4b35-80fa-bdf109db2c5f"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--8cda965c-9868-48b3-b162-8b7ee31081d1",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--7dcf2348-739a-4a21-b165-69eb4c88799b"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--341a85ab-69d4-4fd8-88c8-13ae6893a42d",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--520b86e9-1f67-4431-82fa-035f3c01cf42"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--f4373071-24c9-4dda-84d2-c547a120f3f6",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--97c3d7f6-6e8c-4d0c-ac4b-7ed3f3b30f2e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5eb65a64-1932-431b-ae50-bbbfef324286",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Session Hijacking",
+      "effect_refs": [
+        "attack-operator--1178dc20-2630-43ba-9272-d40cbc7638d1"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--ddeb6e7b-5992-43da-8cfe-fa1ac82f2006",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--5eb65a64-1932-431b-ae50-bbbfef324286"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--37b85046-ebf5-4d8a-9bab-274975858589",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Browser Session Hijacking",
+      "effect_refs": [
+        "attack-operator--ddeb6e7b-5992-43da-8cfe-fa1ac82f2006"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--643f38b0-d8d8-4d51-8ab4-9c0c91814167",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Downloading Manipulated Browser Extension",
+      "effect_refs": [
+        "attack-operator--ddeb6e7b-5992-43da-8cfe-fa1ac82f2006"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--934d0d45-2c98-4886-a5da-f88da2295a65",
+      "spec_version": "2.1",
+      "created": "2025-07-30T19:47:12.853Z",
+      "modified": "2025-07-30T19:47:12.853Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Obtain User Location Information"
+    }
+  ]
+}
