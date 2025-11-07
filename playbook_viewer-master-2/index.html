@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIT 42 PLAYBOOK VIEWER</title>
+    <link href="https://fonts.googleapis.com/css?family=Jura:300|Rajdhani|Inconsolata" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imgs/u42favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="css/bootstrap-tour-standalone.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flags.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script defer src='./js/all.js'></script>
+    <script src="./js/bootstrap-tour-standalone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="./js/datamaps.world.hires.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/23.0.2/ag-grid-community.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/23.0.2/styles/ag-theme-balham-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+    <script src="./js/index.js"></script>
+    <script>$(document)
+        .ready(() => {
+            loadConsts();
+        });
+    </script>
+</head>
+
+<body>
+<div class="modalcontainer"></div>
+<div class="wrapper">
+    <div class="box sidebar">
+        <a href="https://unit42.paloaltonetworks.com/" target="_blank"> <img src='imgs/u42logo.png' alt=''></a>
+        <div class="action walkthrough"><span>PLAYBOOK WALKTHROUGH</span></div>
+        <div class="action view-home"><span>VIEW HOME</span></div>
+        <div class="action view-datamap"><span>VIEW MAP</span></div>
+        <div class="action filter"><span>FILTER PLAYBOOKS</span></div>
+        <div class="action sidebar-clear-filters"><span>CLEAR FILTERS</span></div>
+        <div class="playbooks"></div>
+        <div class="box footer">
+            Created by Palo Alto Networks - Unit 42
+            <br><a style="color:#95989a" href="https://attack.mitre.org/wiki/Main_Page">Mitre ATT&amp;CK™</a>
+            | <a style="color:#95989a" href="https://oasis-open.github.io/cti-documentation/stix/intro">STIX 2.0</a>
+        </div>
+    </div>
+    <div class="box contents"></div>
+</div>
+</body>
+</html>
